@@ -21599,4 +21599,9 @@ p {
 .dd a:hover {
   transform: scale(1.2);
 }
+@media (max-width: 768px) {
+  .hh {
+    font-size: 1rem;
+  }
+}
 /*# sourceMappingURL=bulma.css.map */
