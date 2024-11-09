@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Mi portafolio web hecho con bulma css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Bulma",
+    "CSS",
+    "JS",
+    "HTML"
+  ],
+  "author": "Miguel Vivar",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-avif": "^1.1.1",
+    "gulp-webp": "^4.0.1"
+  }
+}
