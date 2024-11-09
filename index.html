@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="src/img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>VivarDev</title>
+</head>
+<body class="is-family-monospace">
+    <header>
+        <nav class="navbar is-size-5 is-uppercase has-shadow">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img src="src/img/logo.svg" alt="logo">
+                </a>
+                <a role="button" class="navbar-burger has-text-white" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu" id="navMenu">
+                <!-- navbar-start, navbar-end... -->
+                <div class="navbar-start">
+                    <a href="#index" class="navbar-item">
+                        Inicio
+                    </a>
+                    <a href="#about_me" class="navbar-item">
+                        Sobre Mí
+                    </a>
+                    <a href="#skills" class="navbar-item">
+                        Habilidades
+                    </a>
+                    <a href="#projects" class="navbar-item">
+                        Proyectos
+                    </a>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a href="#redes" class="button is-size-5">
+                            Redes Sociales
+                        </a>
+                        <a href="#contac" class="button is-primary is-outlined is-size-5">
+                            Contacto
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="section columns mb-0" id="index">
+            <div class="container column is-flex is-flex-direction-column is-justify-content-center">
+                <h2 class="subtitle is-4">
+                Hola 👋, soy:
+                </h2>
+                <h1 class="title is-1 titulo">
+                Miguel
+                    <strong class="has-text-primary">
+                        Vivar
+                    </strong>
+                </h1>
+                <h2 class="subtitle is-3">
+                    <span class="has-text-primary">
+                        Front-End
+                    </span>
+                    Developer
+                </h2>
+            </div>
+            <div class="container column">
+                <figure class="image is-540x540">
+                    <img src="src/img/Miguel Vivar.png" />
+                </figure>
+            </div>
+        </section>
+    </header>
+    <main class="mt-6">
+        <!-- Inicio Sobre Mí -->
+        <section class="section" id="about_me">
+            <div class="content columns">
+                <div class="column">
+                    <picture>
+                        <img loading="lazy" src="src/img/about_me.jpg" alt="about_me" class="box">
+                    </picture>
+                </div>
+                <div class="column is-flex is-flex-direction-column is-justify-content-center">
+                    <h2 class="title is-2">Sobre Mí 👾</h2>
+                    <p>
+                        Desarrollador web de <strong>Pisco, Ica, Perú</strong> 🇵🇪, apasionado por crear experiencias digitales funcionales y atractivas. Me especializo en diseño y desarrollo de interfaces modernas y responsivas, así como en la creación de entornos de aprendizaje virtuales accesibles. Programar escuchando música 🎧 es una de mis grandes motivaciones, y siempre estoy buscando nuevas oportunidades para aprender y mejorar en el mundo del desarrollo web. 
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Fin Sobre Mí -->
+        <!-- Inicio mis Habilidades -->
+        <section class="section card columns mb-6" id="skills">
+            <div class="column is-flex is-flex-direction-column is-justify-content-center">
+                <h2 class="title is-2">Mis Habilidades ⌨️</h2>
+                <p>
+                    Soy desarrollador web con experiencia en <strong>HTML, CSS y JavaScript</strong>, así como en frameworks de diseño como <strong>Bootstrap, Tailwind y Bulma CSS</strong>. También tengo conocimientos en <strong>Moodle</strong> para crear entornos educativos en línea eficientes y accesibles.
+                </p>
+            </div>
+            <div class="column">
+                <div class="progress-bars has-text-centered mb-4">
+                    <p>HTML 85%</p>
+                    <progress class="progress is-primary" value="85" max="100">HTML</progress>
+                </div>
+                <div class="progress-bars has-text-centered mb-4">
+                    <p>CSS 80%</p>
+                    <progress class="progress is-primary" value="80" max="100">CSS</progress>
+                </div>
+                <div class="progress-bars has-text-centered mb-4">
+                    <p>JavaScript 75%</p>
+                    <progress class="progress is-primary" value="75" max="100">JavaScript</progress>
+                </div>
+                <div class="progress-bars has-text-centered mb-4">
+                    <p>Bootstrap 70%</p>
+                    <progress class="progress is-primary" value="70" max="100">Bootstrap</progress>
+                </div>
+                <div class="progress-bars has-text-centered mb-4">
+                    <p>Tailwind CSS 70%</p>
+                    <progress class="progress is-primary" value="70" max="100">Tailwind CSS</progress>
+                </div>
+                <div class="progress-bars has-text-centered mb-4">
+                    <p>Bulma CSS 70%</p>
+                    <progress class="progress is-primary" value="70" max="100">Bulma CSS</progress>
+                </div>
+                <div class="progress-bars has-text-centered mb-4">
+                    <p>Moodle 65%</p>
+                    <progress class="progress is-primary" value="65" max="100">Moodle</progress>
+                </div>
+                <div class="progress-bars has-text-centered mb-4">
+                    <p>Git 35%</p>
+                    <progress class="progress is-primary" value="35" max="100">Git</progress>
+                </div>
+            </div>
+        </section>
+        <!-- Fin mis Habilidades -->
+        <!-- Inicio Proyectos -->
+        <section class="section" id="projects">
+                <div class="mb-6">
+                    <h2 class="title is-2 has-text-centered">Mis Proyectos 💡</h2>
+                    <p>
+                    Mis proyectos reflejan mi enfoque en el desarrollo web moderno y la creación de experiencias de usuario intuitivas y accesibles. Desde interfaces responsivas hasta entornos de aprendizaje virtual personalizados, cada uno está diseñado con un compromiso hacia la funcionalidad y el diseño limpio. Mi objetivo es brindar soluciones prácticas y estéticamente agradables que faciliten la interacción del usuario y optimicen la experiencia en cada sitio o aplicación.
+                    </p>
+                </div>
+                <div class="proyects">
+                    <!-- Inicio card 1 -->
+                    <div class="card p-5 m-4">
+                        <div class="card-header">
+                            <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Mi Portafolio 💼</h3>
+                        </div>
+                        <figure class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scalee">
+                            <img src="src/img/portfolio.png" alt="imagen de mi portafolio"/>
+                        </figure>
+                        <div class="card-content">
+                            <div class="content">
+                                <p>
+                                    Explora mis proyectos de desarrollo web, enfocados en diseño limpio, funcionalidad y experiencias de usuario atractivas. Con un enfoque en la creación de interfaces modernas y accesibles, este portafolio muestra mi pasión por la tecnología y el aprendizaje constante.
+                                    <strong class="has-text-primary">#html</strong>
+                                    <strong class="has-text-primary">#css</strong>
+                                    <strong class="has-text-primary">#javascript</strong>
+                                    <strong class="has-text-primary">#bulma</strong>
+                                    <strong class="has-text-primary">#responsive</strong>
+                                </p>
+                                <a class="button" href="#" target="_blank">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                        </svg>
+                                    </span>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin card 1 -->
+                    <!-- Inicio card 2 -->
+                    <div class="card p-5 m-4">
+                        <div class="card-header">
+                            <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Colegio General Juan Pablo Fernandini 🏫</h3>
+                        </div>
+                        <figure class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scalee">
+                            <img src="src/img/gjpf.png" alt="imagen de mi portafolio"/>
+                        </figure>
+                        <div class="card-content">
+                            <div class="content">
+                                <p>
+                                    Un sitio web informativo y un aula virtual interactiva que facilita el aprendizaje en línea.
+                                    <strong class="has-text-primary">#html</strong>
+                                    <strong class="has-text-primary">#css</strong>
+                                    <strong class="has-text-primary">#javascript</strong>
+                                    <strong class="has-text-primary">#sass</strong>
+                                    <strong class="has-text-primary">#bootstrap</strong>
+                                    <strong class="has-text-primary">#moodle</strong>
+                                </p>
+                                <a class="button" href="https://gjpf.edu.pe/" target="_blank">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                            <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4"></path>
+                                            <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4"></path>
+                                            <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4"></path>
+                                            <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4"></path>
+                                            <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4"></path>
+                                            <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4"></path>
+                                            <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                            <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                            <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                        </svg>
+                                    </span>
+                                    <span>Link</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin card 2 -->
+                    <!-- Inicio card 3 -->
+                    <div class="card p-5 m-4">
+                        <div class="card-header">
+                            <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Cafetería ☕</h3>
+                        </div>
+                        <figure class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scalee">
+                            <img src="src/img/cafeteria.png" alt="imagen de mi portafolio"/>
+                        </figure>
+                        <div class="card-content">
+                            <div class="content">
+                                <p>
+                                    Un sitio web moderno y fácil de navegar, que presenta el menú, promociones y la ubicación de la cafetería, brindando una experiencia digital deliciosa para los amantes del café.
+                                    <strong class="has-text-primary">#html</strong>
+                                    <strong class="has-text-primary">#css</strong>
+                                    <strong class="has-text-primary">#javascript</strong>
+                                    <strong class="has-text-primary">#npm</strong>
+                                    <strong class="has-text-primary">#gulp</strong>
+                                    <strong class="has-text-primary">#sass</strong>
+                                    <strong class="has-text-primary">#responsive</strong>
+                                </p>
+                                <a class="button" href="https://github.com/MiguelVivar/Cafeteria" target="_blank">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                        </svg>
+                                    </span>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin card 3 -->
+                    <!-- Inicio card 4 -->
+                    <div class="card p-5 m-4">
+                        <div class="card-header">
+                            <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">TechPro 🎧</h3>
+                        </div>
+                        <figure class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scalee">
+                            <img src="src/img/techpro.png" alt="imagen de mi portafolio"/>
+                        </figure>
+                        <div class="card-content">
+                            <div class="content">
+                                <p>
+                                    Un sitio dinámico y atractivo que muestra la gama de audífonos de alta calidad Tech Pro, con opciones de compra rápida, especificaciones detalladas y promociones exclusivas para los amantes del sonido.
+                                    <strong class="has-text-primary">#html</strong>
+                                    <strong class="has-text-primary">#css</strong>
+                                    <strong class="has-text-primary">#responsive</strong>
+                                </p>
+                                <a class="button" href="https://github.com/MiguelVivar/TechPro" target="_blank">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                        </svg>
+                                    </span>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin card 4 -->
+                    <!-- Inicio card 5 -->
+                    <div class="card p-5 m-4">
+                        <div class="card-header">
+                            <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Arquitectura 🏠</h3>
+                        </div>
+                        <figure class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scalee">
+                            <img src="src/img/arquitectura.png" alt="imagen de mi portafolio"/>
+                        </figure>
+                        <div class="card-content">
+                            <div class="content">
+                                <p>
+                                    Un sitio elegante y profesional que destaca proyectos arquitectónicos, portfolios y servicios de diseño, brindando a los visitantes una experiencia visual inspiradora y detallada.
+                                    <strong class="has-text-primary">#html</strong>
+                                    <strong class="has-text-primary">#css</strong>
+                                    <strong class="has-text-primary">#responsive</strong>
+                                </p>
+                                <a class="button" href="https://github.com/MiguelVivar/Arquitectura" target="_blank">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                        </svg>
+                                    </span>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin card 5 -->
+                    <!-- Inicio card 6 -->
+                    <div class="card p-5 m-4">
+                        <div class="card-header">
+                            <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Blog de Café 📒☕</h3>
+                        </div>
+                        <figure class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scalee">
+                            <img src="src/img/blog_cafe.png" alt="imagen de mi portafolio"/>
+                        </figure>
+                        <div class="card-content">
+                            <div class="content">
+                                <p>
+                                    Un espacio dedicado a los amantes del café, con artículos sobre tipos de café, métodos de preparación, y recomendaciones de las mejores cafeterías. Una experiencia aromática y enriquecedora en cada lectura.
+                                    <strong class="has-text-primary">#html</strong>
+                                    <strong class="has-text-primary">#css</strong>
+                                    <strong class="has-text-primary">#responsive</strong>
+                                </p>
+                                <a class="button" href="https://github.com/MiguelVivar/BlogdeCafe" target="_blank">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                        </svg>
+                                    </span>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin card 6 -->
+                </div>
+        </section>
+        <!-- Fin Proyectos -->
+        <!-- Inicio Redes Sociales -->
+        <section class="section has-background-primary" id="redes">
+            <h2 class="title is-2 has-text-white has-text-centered">
+                Mis Redes Sociales 🌐
+            </h2>
+            <p class="has-text-white">
+                Desarrollador web apasionado por el diseño de experiencias digitales funcionales y atractivas. Comparto proyectos, ideas y aprendizajes en tecnología y desarrollo web. Sígueme para conocer más sobre mi camino en el mundo del código y el diseño.
+            </p>
+            <div class="buttons is-flex is-justify-content-center mt-5">
+                <a class="button is-large" href="https://github.com/MiguelVivar" target="_blank">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                        </svg>
+                    </span>
+                    <span>GitHub</span>
+                </a>
+                <a class="button is-large" href="https://www.linkedin.com/in/miguel-vivar-farf%C3%A1n-116058305/" target="_blank">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                            <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                            <path d="M8 11l0 5"></path>
+                            <path d="M8 8l0 .01"></path>
+                            <path d="M12 16l0 -5"></path>
+                            <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                        </svg>
+                    </span>
+                    <span>LinkedIn</span>
+                </a>
+                <a class="button is-large" href="https://www.instagram.com/mvivarf/" target="_blank">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                            <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                            <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                            <path d="M16.5 7.5l0 .01"></path>
+                        </svg>
+                    </span>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </section>
+        <!-- Fin Redes Sociales -->
+        <!-- Inicio Contacto -->
+        <section class="section" id="contac">
+            <h2 class="title is-2 has-text-white has-text-centered mb-6">
+                Contáctame 📞
+            </h2>
+            <form class="columns">
+                <div class="column ff">
+                    <div class="field">
+                        <label class="label ll">Nombre:</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Tu Nombre">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label ll">Correo:</label>
+                        <div class="control">
+                            <input class="input" type="email" placeholder="correo@correo.com">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label ll">Mensaje:</label>
+                        <div class="control">
+                            <textarea class="textarea" placeholder="Mensaje"></textarea>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <button class="button is-primary is-medium has-text-white" onclick="enviarCorreo()">Enviar</button>
+                    </div>
+                </div>
+                <div class="column dd">
+                    <a href="https://wa.me/51977346392" class="ll has-text-white" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2" class="has-text-primary">
+                            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+                            <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="tel:+51977346392" class="ll has-text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2" class="has-text-primary">
+                            <path d="M20 4l-2 2"></path>
+                            <path d="M22 10.5l-2.5 -.5"></path>
+                            <path d="M13.5 2l.5 2.5"></path>
+                            <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2c-8.072 -.49 -14.51 -6.928 -15 -15a2 2 0 0 1 2 -2"></path>
+                        </svg>
+                        +51 977 346 392
+                    </a>
+                    <a href="mailto:miguelvivarfarfan@gmail.com" class="ll has-text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2" class="has-text-primary">
+                            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+                            <path d="M3 7l9 6l9 -6"></path>
+                        </svg>
+                        miguelvivarfarfan@gmail.com
+                    </a>
+                </div>
+            </form>
+        </section>
+        <!-- Fin Contacto -->
+    </main>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                &copy; 2024 <a href="#index" class="has-text-primary">VivarDev</a>. Todos los derechos reservados.
+                Desarrollador <strong>Front-End</strong>
+            </p>
+        </div>
+    </footer>
+</body>
+<script src="js/app.js"></script>
+</html>
