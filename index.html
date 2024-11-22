@@ -52,7 +52,7 @@
                 </div>
             </div>
         </nav>
-        <section class="section columns mb-0" id="inicio">
+        <section class="container columns mb-0" id="inicio">
             <div class="container column is-flex is-flex-direction-column is-justify-content-center">
                 <h2 class="subtitle is-4">
                 Hola 👋, soy:
@@ -82,8 +82,8 @@
     </header>
     <main>
         <!-- Inicio Sobre Mí -->
-        <section class="section" id="sobre_mi">
-            <div class="content columns">
+        <section class="container" id="sobre_mi">
+            <div class="content is-flex-touch is-flex-direction-column-reverse is-hidden-desktop is-align-items-center">
                 <div class="column">
                     <picture>
                         <source srcset="build/img/about_me.avif" type="image/avif">
@@ -129,7 +129,54 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div><!--.sobremi-->
+            <div class="content is-flex-desktop is-flex-direction-row is-hidden-touch">
+                <div class="column">
+                    <picture>
+                        <source srcset="build/img/about_me.avif" type="image/avif">
+                        <source srcset="build/img/about_me.webp" type="image/webp">
+                        <img  class="box" loading="lazy" src="build/img/about_me.jpg" alt="imagen sobre mi" width="600" height="600">
+                    </picture>
+                </div>
+                <div class="column is-flex is-flex-direction-column is-justify-content-center">
+                    <h2 class="title is-2">Sobre Mí 👾</h2>
+                    <p>
+                        Desarrollador web de <strong>Pisco, Ica, Perú</strong> 🇵🇪, apasionado por crear experiencias digitales funcionales y atractivas. Me especializo en diseño y desarrollo de interfaces modernas y responsivas, así como en la creación de entornos de aprendizaje virtuales accesibles. Programar escuchando música 🎧 es una de mis grandes motivaciones, y siempre estoy buscando nuevas oportunidades para aprender y mejorar en el mundo del desarrollo web. 
+                    </p>
+                    <div class="buttons is-flex is-justify-content-center mt-5">
+                        <a class="button is-large" href="https://github.com/MiguelVivar" target="_blank">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                </svg>
+                            </span>
+                            <span>GitHub</span>
+                        </a>
+                        <a class="button is-large" href="https://www.linkedin.com/in/miguel-vivar-farf%C3%A1n-116058305/" target="_blank">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                    <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                                    <path d="M8 11l0 5"></path>
+                                    <path d="M8 8l0 .01"></path>
+                                    <path d="M12 16l0 -5"></path>
+                                    <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                                </svg>
+                            </span>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a class="button is-large is-primary" href="src/CV.pdf" target="_blank">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                    <path d="M19 18a3.5 3.5 0 0 0 0 -7h-1a5 4.5 0 0 0 -11 -2a4.6 4.4 0 0 0 -2.1 8.4"></path>
+                                    <path d="M12 13l0 9"></path>
+                                    <path d="M9 19l3 3l3 -3"></path>
+                                </svg>
+                            </span>
+                            <span>Descargar CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div><!--.sobremi-->
         </section>
         <!-- Fin Sobre Mí -->
         <!-- Inicio mis Habilidades -->
@@ -386,7 +433,7 @@
         </section>
         <!-- Fin Proyectos -->
         <!-- Inicio Redes Sociales -->
-        <section class="section" id="redes">
+        <section class="section container" id="redes">
             <h2 class="title is-2 has-text-white has-text-centered">
                 Mis Redes Sociales 🌐
             </h2>
@@ -428,7 +475,7 @@
         </section>
         <!-- Fin Redes Sociales -->
         <!-- Inicio Contacto -->
-        <section class="section ff" id="contacto">
+        <section class="section container mb-5 ff" id="contacto">
             <h2 class="title is-2 has-text-white has-text-centered mb-6">
                 Contáctame 📞
             </h2>
