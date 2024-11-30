@@ -8,6 +8,8 @@
     <meta name="author" content="Miguel Vivar, VivarDev">
     <link rel="icon" href="src/img/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="build/css/bulma.min.css">
+    <link rel="stylesheet" href="build/css/custom.css">
+    <link rel="stylesheet" href="build/css/spinner.css">
     <title>VivarDev</title>
 </head>
 <body class="is-family-monospace">
@@ -57,7 +59,7 @@
                 <h2 class="subtitle is-4">
                 Hola 👋, soy:
                 </h2>
-                <h1 class="title is-1 titulo">
+                <h1 class="title is-1">
                 Miguel
                     <strong class="has-text-primary">
                         Vivar
@@ -180,45 +182,79 @@
         </section>
         <!-- Fin Sobre Mí -->
         <!-- Inicio mis Habilidades -->
-        <section class="section card columns mb-6" id="habilidades">
+        <section class="section card is-flex is-flex-direction-column mt-4" id="habilidades">
             <div class="column is-flex is-flex-direction-column is-justify-content-center">
-                <h2 class="title is-2">Mis Habilidades ⌨️</h2>
+                <h2 class="title is-2 has-text-centered">Mis Habilidades ⌨️</h2>
                 <p>
                     Soy desarrollador web con experiencia en <strong>HTML, CSS y JavaScript</strong>, así como en frameworks de diseño como <strong>Bootstrap, Tailwind y Bulma CSS</strong>. También tengo conocimientos en <strong>Moodle</strong> para crear entornos educativos en línea eficientes y accesibles.
                 </p>
             </div>
-            <div class="column">
-                <div class="progress-bars has-text-centered mb-4">
-                    <p>HTML 75%</p>
-                    <progress class="progress is-primary" value="75" max="100">HTML</progress>
+            <div class="habilidades is-hidden-tablet">
+                <div class="habilidad is-flex is-flex-direction-column">
+                    <img src="src/svg/html.svg" alt="icono de html" class="icono-habilidad">
+                    <h3 class="is-size-3 has-text-centered has-text-white">HTML5</h3>
                 </div>
-                <div class="progress-bars has-text-centered mb-4">
-                    <p>CSS 75%</p>
-                    <progress class="progress is-primary" value="75" max="100">CSS</progress>
+                <div class="habilidad is-flex is-flex-direction-column mt-6">
+                    <img src="src/svg/css.svg" alt="icono de css" class="icono-habilidad">
+                    <h3 class="is-size-3 has-text-centered has-text-white">CSS3</h3>
                 </div>
-                <div class="progress-bars has-text-centered mb-4">
-                    <p>JavaScript 65%</p>
-                    <progress class="progress is-primary" value="65" max="100">JavaScript</progress>
+                <div class="habilidad is-flex is-flex-direction-column mt-6">
+                    <img src="src/svg/javascript.svg" alt="icono de javascript" class="icono-habilidad">
+                    <h3 class="is-size-3 has-text-centered has-text-white">JavaScript</h3>
                 </div>
-                <div class="progress-bars has-text-centered mb-4">
-                    <p>Bootstrap 60%</p>
-                    <progress class="progress is-primary" value="60" max="100">Bootstrap</progress>
+                <div class="habilidad is-flex is-flex-direction-column mt-6">
+                    <img src="src/svg/bootstrap.svg" alt="icono de bootstrap" class="icono-habilidad">
+                    <h3 class="is-size-3 has-text-centered has-text-white">Bootstrap</h3>
                 </div>
-                <div class="progress-bars has-text-centered mb-4">
-                    <p>Tailwind CSS 60%</p>
-                    <progress class="progress is-primary" value="60" max="100">Tailwind CSS</progress>
+                <div class="habilidad is-flex is-flex-direction-column mt-6">
+                    <img src="src/svg/tailwindcss.svg" alt="icono de tailwind css" class="icono-habilidad">
+                    <h3 class="is-size-3 has-text-centered has-text-white">Tailwind CSS</h3>
                 </div>
-                <div class="progress-bars has-text-centered mb-4">
-                    <p>Bulma CSS 60%</p>
-                    <progress class="progress is-primary" value="60" max="100">Bulma CSS</progress>
+                <div class="habilidad is-flex is-flex-direction-column mt-6">
+                    <img src="src/svg/bulma.svg" alt="icono de bulma css" class="icono-habilidad">
+                    <h3 class="is-size-3 has-text-centered has-text-white">Bulma CSS</h3>
                 </div>
-                <div class="progress-bars has-text-centered mb-4">
-                    <p>Moodle 55%</p>
-                    <progress class="progress is-primary" value="55" max="100">Moodle</progress>
+                <div class="habilidad is-flex is-flex-direction-column mt-6">
+                    <img src="src/svg/moodle.svg" alt="icono de moodle" class="icono-habilidad">
+                    <h3 class="is-size-3 has-text-centered has-text-white">Moodle</h3>
                 </div>
-                <div class="progress-bars has-text-centered mb-4">
-                    <p>Git 35%</p>
-                    <progress class="progress is-primary" value="35" max="100">Git</progress>
+                <div class="habilidad is-flex is-flex-direction-column mt-6">
+                    <img src="src/svg/git.svg" alt="icono de moodle" class="icono-habilidad">
+                    <h3 class="is-size-3 has-text-centered has-text-white">Git</h3>
+                </div>
+            </div>
+            <div class="habilidades grid is-hidden-mobile is-col-min-4 is-gap-4">
+                <div class="habilidad is-flex is-flex-direction-column">
+                    <img src="src/svg/html.svg" alt="icono de html" class="icono-habilidad">
+                    <h3 class="is-size-5 has-text-centered has-text-white">HTML5</h3>
+                </div>
+                <div class="habilidad is-flex is-flex-direction-column ">
+                    <img src="src/svg/css.svg" alt="icono de css" class="icono-habilidad">
+                    <h3 class="is-size-5 has-text-centered has-text-white">CSS3</h3>
+                </div>
+                <div class="habilidad is-flex is-flex-direction-column ">
+                    <img src="src/svg/javascript.svg" alt="icono de javascript" class="icono-habilidad">
+                    <h3 class="is-size-5 has-text-centered has-text-white">JavaScript</h3>
+                </div>
+                <div class="habilidad is-flex is-flex-direction-column ">
+                    <img src="src/svg/bootstrap.svg" alt="icono de bootstrap" class="icono-habilidad">
+                    <h3 class="is-size-5 has-text-centered has-text-white">Bootstrap</h3>
+                </div>
+                <div class="habilidad is-flex is-flex-direction-column ">
+                    <img src="src/svg/tailwindcss.svg" alt="icono de tailwind css" class="icono-habilidad">
+                    <h3 class="is-size-5 has-text-centered has-text-white">Tailwind CSS</h3>
+                </div>
+                <div class="habilidad is-flex is-flex-direction-column ">
+                    <img src="src/svg/bulma.svg" alt="icono de bulma css" class="icono-habilidad">
+                    <h3 class="is-size-5 has-text-centered has-text-white">Bulma CSS</h3>
+                </div>
+                <div class="habilidad is-flex is-flex-direction-column ">
+                    <img src="src/svg/moodle.svg" alt="icono de moodle" class="icono-habilidad">
+                    <h3 class="is-size-5 has-text-centered has-text-white">Moodle</h3>
+                </div>
+                <div class="habilidad is-flex is-flex-direction-column ">
+                    <img src="src/svg/git.svg" alt="icono de moodle" class="icono-habilidad">
+                    <h3 class="is-size-5 has-text-centered has-text-white">Git</h3>
                 </div>
             </div>
         </section>
@@ -231,13 +267,13 @@
                     Mis proyectos reflejan mi enfoque en el desarrollo web moderno y la creación de experiencias de usuario intuitivas y accesibles. Desde interfaces responsivas hasta entornos de aprendizaje virtual personalizados, cada uno está diseñado con un compromiso hacia la funcionalidad y el diseño limpio. Mi objetivo es brindar soluciones prácticas y estéticamente agradables que faciliten la interacción del usuario y optimicen la experiencia en cada sitio o aplicación.
                     </p>
                 </div>
-                <div class="proyects">
+                <div class="grid is-col-min-16">
                     <!-- Inicio card 1 -->
                     <div class="card p-5 m-4">
                         <div class="card-header">
                             <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Mi Portafolio 💼</h3>
                         </div>
-                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scalee">
+                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scale">
                             <source srcset="build/img/portfolio.avif" type="image/avif">
                             <source srcset="build/img/portfolio.webp" type="image/webp">
                             <img loading="lazy" src="build/img/portfolio.png" alt="imagen de mi portafolio" width="100" height="100">
@@ -269,7 +305,7 @@
                         <div class="card-header">
                             <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Colegio General Juan Pablo Fernandini 🏫</h3>
                         </div>
-                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scalee">
+                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scale">
                             <source srcset="build/img/gjpf.avif" type="image/avif">
                             <source srcset="build/img/gjpf.webp" type="image/webp">
                             <img loading="lazy" src="build/img/gjpf.png" alt="imagen de mi proyecto" width="100" height="100">
@@ -310,7 +346,7 @@
                         <div class="card-header">
                             <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Cafetería ☕</h3>
                         </div>
-                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scalee">
+                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scale">
                             <source srcset="build/img/cafeteria.avif" type="image/avif">
                             <source srcset="build/img/cafeteria.webp" type="image/webp">
                             <img loading="lazy" src="build/img/cafeteria.png" alt="imagen de mi proyecto" width="100" height="100">
@@ -344,7 +380,7 @@
                         <div class="card-header">
                             <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">TechPro 🎧</h3>
                         </div>
-                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scalee">
+                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scale">
                             <source srcset="build/img/techpro.avif" type="image/avif">
                             <source srcset="build/img/techpro.webp" type="image/webp">
                             <img loading="lazy" src="build/img/techpro.png" alt="imagen de mi proyecto" width="100" height="100">
@@ -374,7 +410,7 @@
                         <div class="card-header">
                             <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Arquitectura 🏠</h3>
                         </div>
-                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scalee">
+                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scale">
                             <source srcset="build/img/arquitectura.avif" type="image/avif">
                             <source srcset="build/img/arquitectura.webp" type="image/webp">
                             <img loading="lazy" src="build/img/arquitectura.png" alt="imagen de mi proyecto" width="100" height="100">
@@ -404,7 +440,7 @@
                         <div class="card-header">
                             <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Blog de Café 📒☕</h3>
                         </div>
-                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scalee">
+                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scale">
                             <source srcset="build/img/blog_cafe.avif" type="image/avif">
                             <source srcset="build/img/blog_cafe.webp" type="image/webp">
                             <img loading="lazy" src="build/img/blog_cafe.png" alt="imagen de mi proyecto" width="100" height="100">
@@ -475,43 +511,44 @@
         </section>
         <!-- Fin Redes Sociales -->
         <!-- Inicio Contacto -->
-        <section class="section container mb-5 ff" id="contacto">
+        <section class="section container mb-5 border" id="contacto">
             <h2 class="title is-2 has-text-white has-text-centered mb-6">
                 Contáctame 📞
             </h2>
-            <form class="columns">
+            <form class="columns" id="formulario">
                 <div class="column">
                     <div class="field">
-                        <label class="label ll">Nombre:</label>
+                        <label for="nombre" class="label is-size-3">Nombre:</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Tu Nombre">
+                            <input class="input" type="text" placeholder="Tu Nombre" id="nombre" name="nombre">
                         </div>
                     </div>
                     <div class="field">
-                        <label class="label ll">Correo:</label>
+                        <label for="email" class="label is-size-3">Correo:</label>
                         <div class="control">
-                            <input class="input" type="email" placeholder="correo@correo.com">
+                            <input class="input" type="email" placeholder="correo@correo.com" id="email" name="email">
                         </div>
                     </div>
                     <div class="field">
-                        <label class="label ll">Mensaje:</label>
+                        <label for="mensaje" class="label is-size-3">Mensaje:</label>
                         <div class="control">
-                            <textarea class="textarea" placeholder="Mensaje"></textarea>
+                            <textarea class="textarea" placeholder="Mensaje" id="mensaje" name="mensaje"></textarea>
                         </div>
                     </div>
                     <div class="control">
-                        <button class="button is-primary is-medium" onclick="enviarCorreo()">Enviar</button>
+                        <button class="button is-primary is-medium" type="submit" disabled onclick="enviarCorreo()">Enviar</button>
+                        <button class="button is-medium" type="reset">Resetear</button>
                     </div>
                 </div>
-                <div class="column dd">
-                    <a href="https://wa.me/51977346392" class="ll has-text-white" target="_blank">
+                <div class="column is-flex is-flex-direction-column is-justify-content-center has-text-centered">
+                    <a href="https://wa.me/51977346392" class="is-size-3 has-text-white scale m-4" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2" class="has-text-primary">
                             <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
                             <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path>
                         </svg>
                         WhatsApp
                     </a>
-                    <a href="tel:+51977346392" class="ll has-text-white">
+                    <a href="tel:+51977346392" class="is-size-3 has-text-white scale m-4">
                         <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2" class="has-text-primary">
                             <path d="M20 4l-2 2"></path>
                             <path d="M22 10.5l-2.5 -.5"></path>
@@ -520,16 +557,20 @@
                         </svg>
                         +51 977 346 392
                     </a>
-                    <a href="mailto:miguelvivarfarfan@gmail.com" class="ll has-text-white">
+                    <a href="mailto:miguelvivarfarfan@gmail.com" class="is-size-3 has-text-white scale m-4">
                         <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2" class="has-text-primary">
                             <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
                             <path d="M3 7l9 6l9 -6"></path>
                         </svg>
                         Correo
-                        <p class="hh">miguelvivarfarfan@gmail.com</p>
+                        <p class="is-size-6-mobile">miguelvivarfarfan@gmail.com</p>
                     </a>
                 </div>
             </form>
+            <div class="spinner is-hidden" id="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
         </section>
         <!-- Fin Contacto -->
     </main>
@@ -543,4 +584,5 @@
     </footer>
 </body>
 <script src="build/js/app.js"></script>
+<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
 </html>
