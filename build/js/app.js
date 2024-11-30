@@ -163,6 +163,49 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // Cursor animacion
 window.addEventListener("load", (event) => {
-    new cursoreffects.followingDotCursor({ color: ["#00D1B2"] });
+    const targetElement = document.querySelector("#ghost");
+    new cursoreffects.ghostCursor({ element: targetElement });
 });
 
+// Efecto Escritura
+const dynamicPhrases = ["Front-End", "UI/UX", "Freelancer"];
+const staticPhrases = ["Developer", "Designer", "Independiente"];
+
+const dynamicText = document.querySelector(".dynamic-text");
+const staticText = document.querySelector(".static-text");
+
+let dynamicIndex = 0; // Índice para las frases dinámicas
+let staticIndex = 0; // Índice para las frases estáticas
+let charIndex = 0; // Índice del carácter actual
+let isDeleting = false; // Indicador para borrar el texto
+
+function typeEffect() {
+    const currentDynamic = dynamicPhrases[dynamicIndex];
+    const currentStatic = staticPhrases[staticIndex];
+    const speed = isDeleting ? 50 : 100; // Velocidad de escritura/borrado
+
+    // Actualizar la parte dinámica
+    if (isDeleting) {
+        charIndex--; // Borrar un carácter
+    } else {
+        charIndex++; // Escribir un carácter
+    }
+
+    dynamicText.textContent = currentDynamic.slice(0, charIndex);
+
+    if (!isDeleting && charIndex === currentDynamic.length) {
+        // Pausa al final de la escritura
+        setTimeout(() => (isDeleting = true), 1000);
+    } else if (isDeleting && charIndex === 0) {
+        // Cambiar frase al borrar todo
+        isDeleting = false;
+        dynamicIndex = (dynamicIndex + 1) % dynamicPhrases.length; // Alternar dinámico
+        staticIndex = (staticIndex + 1) % staticPhrases.length; // Alternar estático
+        staticText.textContent = staticPhrases[staticIndex]; // Actualizar estático
+    }
+
+    setTimeout(typeEffect, speed);
+}
+
+// Iniciar la animación
+typeEffect();

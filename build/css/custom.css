@@ -41,13 +41,46 @@ html {
 
 /* Barra de desplazamiento */
 body::-webkit-scrollbar {
-    width: 12px;               
-}
-body::-webkit-scrollbar-track {
-    background: var(--bulma-primary-15-invert);        
+    width: 8px;               
 }
 body::-webkit-scrollbar-thumb {
-    background-color: var(--bulma-primary);    
+    background-color: var(--bulma-primary-100);    
     border-radius: 20px;       
-    border: 3px solid var(--bulma-primary);
+}
+
+/* CSS barra de escritura */
+@media (max-width: 430px) {
+    .typing-text {
+        display: block;
+    }
+    .static-text {
+        display: block;
+    }
+    .dynamic-text {
+        display: block;
+    }
+}
+@media (min-width: 431px) {
+    .typing-text {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+.dynamic-text {
+    border-right: 2px solid white; /* Cursor parpadeante */
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.7s steps(2, start) infinite;
+}
+
+/* Animación del cursor */
+@keyframes blink {
+    from {
+        border-right-color: white;
+    }
+    to {
+        border-right-color: transparent;
+    }
 }
