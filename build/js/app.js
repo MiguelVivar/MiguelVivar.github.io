@@ -161,12 +161,6 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 });
 
-// Cursor animacion
-window.addEventListener("load", (event) => {
-    const targetElement = document.querySelector("#ghost");
-    new cursoreffects.ghostCursor({ element: targetElement });
-});
-
 // Efecto Escritura
 const dynamicPhrases = ["Front-End", "UI/UX", "Freelancer"];
 const staticPhrases = ["Developer", "Designer", "Independiente"];
@@ -209,3 +203,4 @@ function typeEffect() {
 
 // Iniciar la animación
 typeEffect();
+
