@@ -9,7 +9,7 @@ html {
     transition:.5s;
 }
 .scale:hover {
-    transform:scale(1.3);
+    transform:scale(1.1);
 }
 .border {
     border:var(--bulma-primary) solid;

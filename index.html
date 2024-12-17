@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="build/css/bulma.min.css">
     <link rel="stylesheet" href="build/css/custom.css">
     <link rel="stylesheet" href="build/css/spinner.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>VivarDev</title>
 </head>
 <body class="is-family-monospace">
@@ -82,15 +83,8 @@
     </header>
     <main>
         <!-- Inicio Sobre Mí -->
-        <section class="container" id="sobre_mi">
-            <div class="content is-flex-touch is-flex-direction-column-reverse is-hidden-desktop is-align-items-center">
-                <div class="column">
-                    <picture>
-                        <source srcset="build/img/about_me.avif" type="image/avif">
-                        <source srcset="build/img/about_me.webp" type="image/webp">
-                        <img  class="box" loading="lazy" src="build/img/about_me.jpg" alt="imagen sobre mi" width="600" height="600">
-                    </picture>
-                </div>
+        <section class="container section " id="sobre_mi">
+            <div class="content is-flex-mobile is-flex-direction-column is-hidden-tablet is-align-items-center">
                 <div class="column is-flex is-flex-direction-column is-justify-content-center mt-6">
                     <h2 class="title is-2 mt-6">Sobre Mí 👾</h2>
                     <p>
@@ -117,7 +111,7 @@
                             </span>
                             <span>LinkedIn</span>
                         </a>
-                        <a class="button is-large is-primary" href="src/CV.pdf" target="_blank">
+                        <a class="button is-large is-primary" href="build/CV.pdf" target="_blank">
                             <span class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
                                     <path d="M19 18a3.5 3.5 0 0 0 0 -7h-1a5 4.5 0 0 0 -11 -2a4.6 4.4 0 0 0 -2.1 8.4"></path>
@@ -129,16 +123,77 @@
                         </a>
                     </div>
                 </div>
-            </div><!--.sobremi-->
-            <div class="content is-flex-desktop is-flex-direction-row is-hidden-touch">
                 <div class="column">
-                    <picture>
-                        <source srcset="build/img/about_me.avif" type="image/avif">
-                        <source srcset="build/img/about_me.webp" type="image/webp">
-                        <img  class="box" loading="lazy" src="build/img/about_me.jpg" alt="imagen sobre mi" width="600" height="600">
-                    </picture>
+                    <section class="is-flex is-flex-direction-column mt-4" id="habilidades">
+                        <div class="column is-flex is-flex-direction-column is-justify-content-center">
+                            <h2 class="title is-2 has-text-centered">Mis Habilidades ⌨️</h2>
+                        </div>
+                        <div class="habilidades is-hidden-tablet">
+                            <div class="habilidad is-flex is-flex-direction-column">
+                                <img src="src/svg/html.svg" alt="icono de html" class="icono-habilidad">
+                                <h3 class="is-size-3 has-text-centered has-text-white">HTML5</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column mt-6">
+                                <img src="src/svg/css.svg" alt="icono de css" class="icono-habilidad">
+                                <h3 class="is-size-3 has-text-centered has-text-white">CSS3</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column mt-6">
+                                <img src="src/svg/javascript.svg" alt="icono de javascript" class="icono-habilidad">
+                                <h3 class="is-size-3 has-text-centered has-text-white">JavaScript</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column mt-6">
+                                <img src="src/svg/bootstrap.svg" alt="icono de bootstrap" class="icono-habilidad">
+                                <h3 class="is-size-3 has-text-centered has-text-white">Bootstrap</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column mt-6">
+                                <img src="src/svg/tailwindcss.svg" alt="icono de tailwind css" class="icono-habilidad">
+                                <h3 class="is-size-3 has-text-centered has-text-white">Tailwind CSS</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column mt-6">
+                                <img src="src/svg/bulma.svg" alt="icono de bulma css" class="icono-habilidad">
+                                <h3 class="is-size-3 has-text-centered has-text-white">Bulma CSS</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column mt-6">
+                                <img src="src/svg/git.svg" alt="icono de moodle" class="icono-habilidad">
+                                <h3 class="is-size-3 has-text-centered has-text-white">Git</h3>
+                            </div>
+                        </div>
+                        <div class="habilidades grid is-hidden-mobile is-col-min-4 is-gap-4">
+                            <div class="habilidad is-flex is-flex-direction-column">
+                                <img src="src/svg/html.svg" alt="icono de html" class="icono-habilidad">
+                                <h3 class="is-size-5 has-text-centered has-text-white">HTML5</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column ">
+                                <img src="src/svg/css.svg" alt="icono de css" class="icono-habilidad">
+                                <h3 class="is-size-5 has-text-centered has-text-white">CSS3</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column ">
+                                <img src="src/svg/javascript.svg" alt="icono de javascript" class="icono-habilidad">
+                                <h3 class="is-size-5 has-text-centered has-text-white">JavaScript</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column ">
+                                <img src="src/svg/bootstrap.svg" alt="icono de bootstrap" class="icono-habilidad">
+                                <h3 class="is-size-5 has-text-centered has-text-white">Bootstrap</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column ">
+                                <img src="src/svg/tailwindcss.svg" alt="icono de tailwind css" class="icono-habilidad">
+                                <h3 class="is-size-5 has-text-centered has-text-white">Tailwind CSS</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column ">
+                                <img src="src/svg/bulma.svg" alt="icono de bulma css" class="icono-habilidad">
+                                <h3 class="is-size-5 has-text-centered has-text-white">Bulma CSS</h3>
+                            </div>
+            
+                            <div class="habilidad is-flex is-flex-direction-column ">
+                                <img src="src/svg/git.svg" alt="icono de moodle" class="icono-habilidad">
+                                <h3 class="is-size-5 has-text-centered has-text-white">Git</h3>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <div class="column is-flex is-flex-direction-column is-justify-content-center">
+            </div><!--.sobremi-->
+            <div class="content is-flex-tablet is-flex-direction-row is-hidden-mobile">
+                <div class="column is-flex is-flex-direction-column is-justify-content-center mt-4">
                     <h2 class="title is-2">Sobre Mí 👾</h2>
                     <p>
                         Desarrollador web de <strong>Pisco, Ica, Perú</strong> 🇵🇪, apasionado por crear experiencias digitales funcionales y atractivas. Me especializo en diseño y desarrollo de interfaces modernas y responsivas, así como en la creación de entornos de aprendizaje virtuales accesibles. Programar escuchando música 🎧 es una de mis grandes motivaciones, y siempre estoy buscando nuevas oportunidades para aprender y mejorar en el mundo del desarrollo web. 
@@ -164,7 +219,7 @@
                             </span>
                             <span>LinkedIn</span>
                         </a>
-                        <a class="button is-large is-primary" href="src/CV.pdf" target="_blank">
+                        <a class="button is-large is-primary" href="build/CV.pdf" target="_blank">
                             <span class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
                                     <path d="M19 18a3.5 3.5 0 0 0 0 -7h-1a5 4.5 0 0 0 -11 -2a4.6 4.4 0 0 0 -2.1 8.4"></path>
@@ -176,294 +231,444 @@
                         </a>
                     </div>
                 </div>
+                <div class="column">
+                    <section class="is-flex is-flex-direction-column" id="habilidades">
+                        <div class="column is-flex is-flex-direction-column is-justify-content-center">
+                            <h2 class="title is-2 has-text-centered">Mis Habilidades ⌨️</h2>
+                        </div>
+                        <div class="habilidades is-hidden-tablet">
+                            <div class="habilidad is-flex is-flex-direction-column">
+                                <img src="src/svg/html.svg" alt="icono de html" class="icono-habilidad">
+                                <h3 class="is-size-3 has-text-centered has-text-white">HTML5</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column mt-6">
+                                <img src="src/svg/css.svg" alt="icono de css" class="icono-habilidad">
+                                <h3 class="is-size-3 has-text-centered has-text-white">CSS3</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column mt-6">
+                                <img src="src/svg/javascript.svg" alt="icono de javascript" class="icono-habilidad">
+                                <h3 class="is-size-3 has-text-centered has-text-white">JavaScript</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column mt-6">
+                                <img src="src/svg/bootstrap.svg" alt="icono de bootstrap" class="icono-habilidad">
+                                <h3 class="is-size-3 has-text-centered has-text-white">Bootstrap</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column mt-6">
+                                <img src="src/svg/tailwindcss.svg" alt="icono de tailwind css" class="icono-habilidad">
+                                <h3 class="is-size-3 has-text-centered has-text-white">Tailwind CSS</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column mt-6">
+                                <img src="src/svg/bulma.svg" alt="icono de bulma css" class="icono-habilidad">
+                                <h3 class="is-size-3 has-text-centered has-text-white">Bulma CSS</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column mt-6">
+                                <img src="src/svg/git.svg" alt="icono de moodle" class="icono-habilidad">
+                                <h3 class="is-size-3 has-text-centered has-text-white">Git</h3>
+                            </div>
+                        </div>
+                        <div class="habilidades grid is-hidden-mobile is-col-min-4 is-gap-4">
+                            <div class="habilidad is-flex is-flex-direction-column">
+                                <img src="src/svg/html.svg" alt="icono de html" class="icono-habilidad">
+                                <h3 class="is-size-5 has-text-centered has-text-white">HTML5</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column ">
+                                <img src="src/svg/css.svg" alt="icono de css" class="icono-habilidad">
+                                <h3 class="is-size-5 has-text-centered has-text-white">CSS3</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column ">
+                                <img src="src/svg/javascript.svg" alt="icono de javascript" class="icono-habilidad">
+                                <h3 class="is-size-5 has-text-centered has-text-white">JavaScript</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column ">
+                                <img src="src/svg/bootstrap.svg" alt="icono de bootstrap" class="icono-habilidad">
+                                <h3 class="is-size-5 has-text-centered has-text-white">Bootstrap</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column ">
+                                <img src="src/svg/tailwindcss.svg" alt="icono de tailwind css" class="icono-habilidad">
+                                <h3 class="is-size-5 has-text-centered has-text-white">Tailwind CSS</h3>
+                            </div>
+                            <div class="habilidad is-flex is-flex-direction-column ">
+                                <img src="src/svg/bulma.svg" alt="icono de bulma css" class="icono-habilidad">
+                                <h3 class="is-size-5 has-text-centered has-text-white">Bulma CSS</h3>
+                            </div>
+            
+                            <div class="habilidad is-flex is-flex-direction-column ">
+                                <img src="src/svg/git.svg" alt="icono de moodle" class="icono-habilidad">
+                                <h3 class="is-size-5 has-text-centered has-text-white">Git</h3>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div><!--.sobremi-->
         </section>
         <!-- Fin Sobre Mí -->
-        <!-- Inicio mis Habilidades -->
-        <section class="section card is-flex is-flex-direction-column mt-4" id="habilidades">
-            <div class="column is-flex is-flex-direction-column is-justify-content-center">
-                <h2 class="title is-2 has-text-centered">Mis Habilidades ⌨️</h2>
-                <p>
-                    Soy desarrollador web con experiencia en <strong>HTML, CSS y JavaScript</strong>, así como en frameworks de diseño como <strong>Bootstrap, Tailwind y Bulma CSS</strong>. También tengo conocimientos en <strong>Moodle</strong> para crear entornos educativos en línea eficientes y accesibles.
+        <!-- Inicio Proyectos -->
+        <section class="section has-text-centered" id="proyectos">
+            <div class="mb-6">
+                <h2 class="title is-2 has-text-centered">Mis Proyectos 💡</h2>
+                <p class="has-text-left">
+                Mis proyectos reflejan mi enfoque en el desarrollo web moderno y la creación de experiencias de usuario intuitivas y accesibles. Desde interfaces responsivas hasta entornos de aprendizaje virtual personalizados, cada uno está diseñado con un compromiso hacia la funcionalidad y el diseño limpio. Mi objetivo es brindar soluciones prácticas y estéticamente agradables que faciliten la interacción del usuario y optimicen la experiencia en cada sitio o aplicación.
                 </p>
             </div>
-            <div class="habilidades is-hidden-tablet">
-                <div class="habilidad is-flex is-flex-direction-column">
-                    <img src="src/svg/html.svg" alt="icono de html" class="icono-habilidad">
-                    <h3 class="is-size-3 has-text-centered has-text-white">HTML5</h3>
+            <div class="grid is-col-min-25 proyectos is-hidden-mobile">
+                <!-- Inicio card 1 -->
+                <div class="card p-5 m-4 scale">
+                    <div class="card-header">
+                        <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">CRM IndexedDB 📁</h3>
+                    </div>
+                    <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto">
+                        <source srcset="build/img/proyecto1.avif" type="image/avif">
+                        <source srcset="build/img/proyecto1.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/proyecto1.png" alt="imagen de mi portafolio" width="100" height="100">
+                    </picture>
+                    <div class="card-content">
+                        <div class="content">
+                            <a class="button" href="https://crmindexeddbvivar.netlify.app/" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4"></path>
+                                        <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4"></path>
+                                        <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4"></path>
+                                        <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4"></path>
+                                        <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4"></path>
+                                        <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4"></path>
+                                        <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                        <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                        <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                    </svg>
+                                </span>
+                                <span>Link</span>
+                            </a>
+                            <a class="button" href="https://github.com/MiguelVivar/CRMIndexedDB" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                    </svg>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="habilidad is-flex is-flex-direction-column mt-6">
-                    <img src="src/svg/css.svg" alt="icono de css" class="icono-habilidad">
-                    <h3 class="is-size-3 has-text-centered has-text-white">CSS3</h3>
+                <!-- Fin card 1 -->
+                <!-- Inicio card 2 -->
+                <div class="card p-5 m-4 scale">
+                    <div class="card-header">
+                        <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Mi Portafolio 💼</h3>
+                    </div>
+                    <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto">
+                        <source srcset="build/img/proyecto2.avif" type="image/avif">
+                        <source srcset="build/img/proyecto2.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/proyecto2.png" alt="imagen de mi proyecto" width="100" height="100">
+                    </picture>
+                    <div class="card-content">
+                        <div class="content">
+                            <a class="button" href="https://miguelvivar.github.io/" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4"></path>
+                                        <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4"></path>
+                                        <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4"></path>
+                                        <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4"></path>
+                                        <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4"></path>
+                                        <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4"></path>
+                                        <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                        <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                        <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                    </svg>
+                                </span>
+                                <span>Link</span>
+                            </a>
+                            <a class="button" href="https://github.com/MiguelVivar/MiguelVivar.github.io" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                    </svg>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="habilidad is-flex is-flex-direction-column mt-6">
-                    <img src="src/svg/javascript.svg" alt="icono de javascript" class="icono-habilidad">
-                    <h3 class="is-size-3 has-text-centered has-text-white">JavaScript</h3>
+                <!-- Fin card 2 -->
+                <!-- Inicio card 3 -->
+                <div class="card p-5 m-4 scale">
+                    <div class="card-header">
+                        <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Tienda 🛒</h3>
+                    </div>
+                    <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto">
+                        <source srcset="build/img/proyecto3.avif" type="image/avif">
+                        <source srcset="build/img/proyecto3.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/proyecto3.png" alt="imagen de mi proyecto" width="100" height="100">
+                    </picture>
+                    <div class="card-content">
+                        <div class="content">
+                            <a class="button" href="https://github.com/MiguelVivar/CarritoCompras" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                    </svg>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="habilidad is-flex is-flex-direction-column mt-6">
-                    <img src="src/svg/bootstrap.svg" alt="icono de bootstrap" class="icono-habilidad">
-                    <h3 class="is-size-3 has-text-centered has-text-white">Bootstrap</h3>
+                <!-- Fin card 3 -->
+                <!-- Inicio card 4 -->
+                <div class="card p-5 m-4 scale">
+                    <div class="card-header">
+                        <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Cafetería ☕</h3>
+                    </div>
+                    <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto">
+                        <source srcset="build/img/proyecto4.avif" type="image/avif">
+                        <source srcset="build/img/proyecto4.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/proyecto4.png" alt="imagen de mi proyecto" width="100" height="100">
+                    </picture>
+                    <div class="card-content">
+                        <div class="content">
+                            <a class="button" href="https://github.com/MiguelVivar/Cafeteria" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                    </svg>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="habilidad is-flex is-flex-direction-column mt-6">
-                    <img src="src/svg/tailwindcss.svg" alt="icono de tailwind css" class="icono-habilidad">
-                    <h3 class="is-size-3 has-text-centered has-text-white">Tailwind CSS</h3>
+                <!-- Fin card 4 -->
+                <!-- Inicio card 5 -->
+                <div class="card p-5 m-4 scale">
+                    <div class="card-header">
+                        <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Spa 💆</h3>
+                    </div>
+                    <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto">
+                        <source srcset="build/img/proyecto5.avif" type="image/avif">
+                        <source srcset="build/img/proyecto5.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/proyecto5.png" alt="imagen de mi proyecto" width="100" height="100">
+                    </picture>
+                    <div class="card-content">
+                        <div class="content">
+                            <a class="button" href="https://github.com/MiguelVivar/CarolinaSPA" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                    </svg>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="habilidad is-flex is-flex-direction-column mt-6">
-                    <img src="src/svg/bulma.svg" alt="icono de bulma css" class="icono-habilidad">
-                    <h3 class="is-size-3 has-text-centered has-text-white">Bulma CSS</h3>
+                <!-- Fin card 5 -->
+                <!-- Inicio card 6 -->
+                <div class="card p-5 m-4 scale">
+                    <div class="card-header">
+                        <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">TechPro 🎧</h3>
+                    </div>
+                    <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto">
+                        <source srcset="build/img/proyecto6.avif" type="image/avif">
+                        <source srcset="build/img/proyecto6.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/proyecto6.png" alt="imagen de mi proyecto" width="100" height="100">
+                    </picture>
+                    <div class="card-content">
+                        <div class="content">
+                            <a class="button" href="https://github.com/MiguelVivar/TechPro" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                    </svg>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="habilidad is-flex is-flex-direction-column mt-6">
-                    <img src="src/svg/moodle.svg" alt="icono de moodle" class="icono-habilidad">
-                    <h3 class="is-size-3 has-text-centered has-text-white">Moodle</h3>
-                </div>
-                <div class="habilidad is-flex is-flex-direction-column mt-6">
-                    <img src="src/svg/git.svg" alt="icono de moodle" class="icono-habilidad">
-                    <h3 class="is-size-3 has-text-centered has-text-white">Git</h3>
-                </div>
+                <!-- Fin card 6 -->
             </div>
-            <div class="habilidades grid is-hidden-mobile is-col-min-4 is-gap-4">
-                <div class="habilidad is-flex is-flex-direction-column">
-                    <img src="src/svg/html.svg" alt="icono de html" class="icono-habilidad">
-                    <h3 class="is-size-5 has-text-centered has-text-white">HTML5</h3>
+            <div class="grid is-col-min-10 proyectos is-hidden-tablet">
+                <!-- Inicio card 1 -->
+                <div class="card p-5 m-4 scale">
+                    <div class="card-header">
+                        <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">CRM IndexedDB 📁</h3>
+                    </div>
+                    <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto">
+                        <source srcset="build/img/proyecto1.avif" type="image/avif">
+                        <source srcset="build/img/proyecto1.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/proyecto1.png" alt="imagen de mi portafolio" width="100" height="100">
+                    </picture>
+                    <div class="card-content">
+                        <div class="content">
+                            <a class="button" href="https://crmindexeddbvivar.netlify.app/" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4"></path>
+                                        <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4"></path>
+                                        <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4"></path>
+                                        <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4"></path>
+                                        <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4"></path>
+                                        <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4"></path>
+                                        <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                        <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                        <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                    </svg>
+                                </span>
+                                <span>Link</span>
+                            </a>
+                            <a class="button" href="https://github.com/MiguelVivar/CRMIndexedDB" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                    </svg>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="habilidad is-flex is-flex-direction-column ">
-                    <img src="src/svg/css.svg" alt="icono de css" class="icono-habilidad">
-                    <h3 class="is-size-5 has-text-centered has-text-white">CSS3</h3>
+                <!-- Fin card 1 -->
+                <!-- Inicio card 2 -->
+                <div class="card p-5 m-4 scale">
+                    <div class="card-header">
+                        <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Mi Portafolio 💼</h3>
+                    </div>
+                    <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto">
+                        <source srcset="build/img/proyecto2.avif" type="image/avif">
+                        <source srcset="build/img/proyecto2.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/proyecto2.png" alt="imagen de mi proyecto" width="100" height="100">
+                    </picture>
+                    <div class="card-content">
+                        <div class="content">
+                            <a class="button" href="https://miguelvivar.github.io/" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4"></path>
+                                        <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4"></path>
+                                        <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4"></path>
+                                        <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4"></path>
+                                        <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4"></path>
+                                        <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4"></path>
+                                        <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                        <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                        <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4"></path>
+                                    </svg>
+                                </span>
+                                <span>Link</span>
+                            </a>
+                            <a class="button" href="https://github.com/MiguelVivar/MiguelVivar.github.io" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                    </svg>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="habilidad is-flex is-flex-direction-column ">
-                    <img src="src/svg/javascript.svg" alt="icono de javascript" class="icono-habilidad">
-                    <h3 class="is-size-5 has-text-centered has-text-white">JavaScript</h3>
+                <!-- Fin card 2 -->
+                <!-- Inicio card 3 -->
+                <div class="card p-5 m-4 scale">
+                    <div class="card-header">
+                        <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Tienda 🛒</h3>
+                    </div>
+                    <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto">
+                        <source srcset="build/img/proyecto3.avif" type="image/avif">
+                        <source srcset="build/img/proyecto3.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/proyecto3.png" alt="imagen de mi proyecto" width="100" height="100">
+                    </picture>
+                    <div class="card-content">
+                        <div class="content">
+                            <a class="button" href="https://github.com/MiguelVivar/CarritoCompras" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                    </svg>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="habilidad is-flex is-flex-direction-column ">
-                    <img src="src/svg/bootstrap.svg" alt="icono de bootstrap" class="icono-habilidad">
-                    <h3 class="is-size-5 has-text-centered has-text-white">Bootstrap</h3>
+                <!-- Fin card 3 -->
+                <!-- Inicio card 4 -->
+                <div class="card p-5 m-4 scale">
+                    <div class="card-header">
+                        <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Cafetería ☕</h3>
+                    </div>
+                    <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto">
+                        <source srcset="build/img/proyecto4.avif" type="image/avif">
+                        <source srcset="build/img/proyecto4.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/proyecto4.png" alt="imagen de mi proyecto" width="100" height="100">
+                    </picture>
+                    <div class="card-content">
+                        <div class="content">
+                            <a class="button" href="https://github.com/MiguelVivar/Cafeteria" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                    </svg>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="habilidad is-flex is-flex-direction-column ">
-                    <img src="src/svg/tailwindcss.svg" alt="icono de tailwind css" class="icono-habilidad">
-                    <h3 class="is-size-5 has-text-centered has-text-white">Tailwind CSS</h3>
+                <!-- Fin card 4 -->
+                <!-- Inicio card 5 -->
+                <div class="card p-5 m-4 scale">
+                    <div class="card-header">
+                        <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Spa 💆</h3>
+                    </div>
+                    <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto">
+                        <source srcset="build/img/proyecto5.avif" type="image/avif">
+                        <source srcset="build/img/proyecto5.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/proyecto5.png" alt="imagen de mi proyecto" width="100" height="100">
+                    </picture>
+                    <div class="card-content">
+                        <div class="content">
+                            <a class="button" href="https://github.com/MiguelVivar/CarolinaSPA" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                    </svg>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="habilidad is-flex is-flex-direction-column ">
-                    <img src="src/svg/bulma.svg" alt="icono de bulma css" class="icono-habilidad">
-                    <h3 class="is-size-5 has-text-centered has-text-white">Bulma CSS</h3>
+                <!-- Fin card 5 -->
+                <!-- Inicio card 6 -->
+                <div class="card p-5 m-4 scale">
+                    <div class="card-header">
+                        <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">TechPro 🎧</h3>
+                    </div>
+                    <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto">
+                        <source srcset="build/img/proyecto6.avif" type="image/avif">
+                        <source srcset="build/img/proyecto6.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/proyecto6.png" alt="imagen de mi proyecto" width="100" height="100">
+                    </picture>
+                    <div class="card-content">
+                        <div class="content">
+                            <a class="button" href="https://github.com/MiguelVivar/TechPro" target="_blank">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                    </svg>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="habilidad is-flex is-flex-direction-column ">
-                    <img src="src/svg/moodle.svg" alt="icono de moodle" class="icono-habilidad">
-                    <h3 class="is-size-5 has-text-centered has-text-white">Moodle</h3>
-                </div>
-                <div class="habilidad is-flex is-flex-direction-column ">
-                    <img src="src/svg/git.svg" alt="icono de moodle" class="icono-habilidad">
-                    <h3 class="is-size-5 has-text-centered has-text-white">Git</h3>
-                </div>
+                <!-- Fin card 6 -->
             </div>
-        </section>
-        <!-- Fin mis Habilidades -->
-        <!-- Inicio Proyectos -->
-        <section class="section" id="proyectos">
-                <div class="mb-6">
-                    <h2 class="title is-2 has-text-centered">Mis Proyectos 💡</h2>
-                    <p>
-                    Mis proyectos reflejan mi enfoque en el desarrollo web moderno y la creación de experiencias de usuario intuitivas y accesibles. Desde interfaces responsivas hasta entornos de aprendizaje virtual personalizados, cada uno está diseñado con un compromiso hacia la funcionalidad y el diseño limpio. Mi objetivo es brindar soluciones prácticas y estéticamente agradables que faciliten la interacción del usuario y optimicen la experiencia en cada sitio o aplicación.
-                    </p>
-                </div>
-                <div class="grid is-col-min-16">
-                    <!-- Inicio card 1 -->
-                    <div class="card p-5 m-4">
-                        <div class="card-header">
-                            <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Mi Portafolio 💼</h3>
-                        </div>
-                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scale">
-                            <source srcset="build/img/portfolio.avif" type="image/avif">
-                            <source srcset="build/img/portfolio.webp" type="image/webp">
-                            <img loading="lazy" src="build/img/portfolio.png" alt="imagen de mi portafolio" width="100" height="100">
-                        </picture>
-                        <div class="card-content">
-                            <div class="content">
-                                <p>
-                                    Explora mis proyectos de desarrollo web, enfocados en diseño limpio, funcionalidad y experiencias de usuario atractivas. Con un enfoque en la creación de interfaces modernas y accesibles, este portafolio muestra mi pasión por la tecnología y el aprendizaje constante.
-                                    <strong class="has-text-primary">#html</strong>
-                                    <strong class="has-text-primary">#css</strong>
-                                    <strong class="has-text-primary">#javascript</strong>
-                                    <strong class="has-text-primary">#bulma</strong>
-                                    <strong class="has-text-primary">#responsive</strong>
-                                </p>
-                                <a class="button" href="#" target="_blank">
-                                    <span class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-                                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-                                        </svg>
-                                    </span>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin card 1 -->
-                    <!-- Inicio card 2 -->
-                    <div class="card p-5 m-4">
-                        <div class="card-header">
-                            <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Colegio General Juan Pablo Fernandini 🏫</h3>
-                        </div>
-                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scale">
-                            <source srcset="build/img/gjpf.avif" type="image/avif">
-                            <source srcset="build/img/gjpf.webp" type="image/webp">
-                            <img loading="lazy" src="build/img/gjpf.png" alt="imagen de mi proyecto" width="100" height="100">
-                        </picture>
-                        <div class="card-content">
-                            <div class="content">
-                                <p>
-                                    Un sitio web informativo y un aula virtual interactiva que facilita el aprendizaje en línea.
-                                    <strong class="has-text-primary">#html</strong>
-                                    <strong class="has-text-primary">#css</strong>
-                                    <strong class="has-text-primary">#javascript</strong>
-                                    <strong class="has-text-primary">#sass</strong>
-                                    <strong class="has-text-primary">#bootstrap</strong>
-                                    <strong class="has-text-primary">#moodle</strong>
-                                </p>
-                                <a class="button" href="https://gjpf.edu.pe/" target="_blank">
-                                    <span class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-                                            <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4"></path>
-                                            <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4"></path>
-                                            <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4"></path>
-                                            <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4"></path>
-                                            <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4"></path>
-                                            <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4"></path>
-                                            <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4"></path>
-                                            <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4"></path>
-                                            <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4"></path>
-                                        </svg>
-                                    </span>
-                                    <span>Link</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin card 2 -->
-                    <!-- Inicio card 3 -->
-                    <div class="card p-5 m-4">
-                        <div class="card-header">
-                            <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Cafetería ☕</h3>
-                        </div>
-                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scale">
-                            <source srcset="build/img/cafeteria.avif" type="image/avif">
-                            <source srcset="build/img/cafeteria.webp" type="image/webp">
-                            <img loading="lazy" src="build/img/cafeteria.png" alt="imagen de mi proyecto" width="100" height="100">
-                        </picture>
-                        <div class="card-content">
-                            <div class="content">
-                                <p>
-                                    Un sitio web moderno y fácil de navegar, que presenta el menú, promociones y la ubicación de la cafetería, brindando una experiencia digital deliciosa para los amantes del café.
-                                    <strong class="has-text-primary">#html</strong>
-                                    <strong class="has-text-primary">#css</strong>
-                                    <strong class="has-text-primary">#javascript</strong>
-                                    <strong class="has-text-primary">#npm</strong>
-                                    <strong class="has-text-primary">#gulp</strong>
-                                    <strong class="has-text-primary">#sass</strong>
-                                    <strong class="has-text-primary">#responsive</strong>
-                                </p>
-                                <a class="button" href="https://github.com/MiguelVivar/Cafeteria" target="_blank">
-                                    <span class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-                                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-                                        </svg>
-                                    </span>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin card 3 -->
-                    <!-- Inicio card 4 -->
-                    <div class="card p-5 m-4">
-                        <div class="card-header">
-                            <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">TechPro 🎧</h3>
-                        </div>
-                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scale">
-                            <source srcset="build/img/techpro.avif" type="image/avif">
-                            <source srcset="build/img/techpro.webp" type="image/webp">
-                            <img loading="lazy" src="build/img/techpro.png" alt="imagen de mi proyecto" width="100" height="100">
-                        </picture>
-                        <div class="card-content">
-                            <div class="content">
-                                <p>
-                                    Un sitio dinámico y atractivo que muestra la gama de audífonos de alta calidad Tech Pro, con opciones de compra rápida, especificaciones detalladas y promociones exclusivas para los amantes del sonido.
-                                    <strong class="has-text-primary">#html</strong>
-                                    <strong class="has-text-primary">#css</strong>
-                                    <strong class="has-text-primary">#responsive</strong>
-                                </p>
-                                <a class="button" href="https://github.com/MiguelVivar/TechPro" target="_blank">
-                                    <span class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-                                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-                                        </svg>
-                                    </span>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin card 4 -->
-                    <!-- Inicio card 5 -->
-                    <div class="card p-5 m-4">
-                        <div class="card-header">
-                            <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Arquitectura 🏠</h3>
-                        </div>
-                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scale">
-                            <source srcset="build/img/arquitectura.avif" type="image/avif">
-                            <source srcset="build/img/arquitectura.webp" type="image/webp">
-                            <img loading="lazy" src="build/img/arquitectura.png" alt="imagen de mi proyecto" width="100" height="100">
-                        </picture>
-                        <div class="card-content">
-                            <div class="content">
-                                <p>
-                                    Un sitio elegante y profesional que destaca proyectos arquitectónicos, portfolios y servicios de diseño, brindando a los visitantes una experiencia visual inspiradora y detallada.
-                                    <strong class="has-text-primary">#html</strong>
-                                    <strong class="has-text-primary">#css</strong>
-                                    <strong class="has-text-primary">#responsive</strong>
-                                </p>
-                                <a class="button" href="https://github.com/MiguelVivar/Arquitectura" target="_blank">
-                                    <span class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-                                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-                                        </svg>
-                                    </span>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin card 5 -->
-                    <!-- Inicio card 6 -->
-                    <div class="card p-5 m-4">
-                        <div class="card-header">
-                            <h3 class="subtitle is-3 has-text-primary mt-0 mr-auto mb-4 ml-auto">Blog de Café 📒☕</h3>
-                        </div>
-                        <picture class="image is-384x384 mt-0 mr-auto mb-0 ml-auto scale">
-                            <source srcset="build/img/blog_cafe.avif" type="image/avif">
-                            <source srcset="build/img/blog_cafe.webp" type="image/webp">
-                            <img loading="lazy" src="build/img/blog_cafe.png" alt="imagen de mi proyecto" width="100" height="100">
-                        </picture>
-                        <div class="card-content">
-                            <div class="content">
-                                <p>
-                                    Un espacio dedicado a los amantes del café, con artículos sobre tipos de café, métodos de preparación, y recomendaciones de las mejores cafeterías. Una experiencia aromática y enriquecedora en cada lectura.
-                                    <strong class="has-text-primary">#html</strong>
-                                    <strong class="has-text-primary">#css</strong>
-                                    <strong class="has-text-primary">#responsive</strong>
-                                </p>
-                                <a class="button" href="https://github.com/MiguelVivar/BlogdeCafe" target="_blank">
-                                    <span class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
-                                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-                                        </svg>
-                                    </span>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin card 6 -->
-                </div>
+            <a class="button is-primary is-medium mt-6 animate__animated animate__bounce animate__fast animate__infinite animate__delay-2s" href="https://github.com/MiguelVivar" target="_blank">
+                Ver más proyectos...
+            </a>
         </section>
         <!-- Fin Proyectos -->
         <!-- Inicio Redes Sociales -->

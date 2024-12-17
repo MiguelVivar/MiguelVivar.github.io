@@ -203,4 +203,3 @@ function typeEffect() {
 
 // Iniciar la animación
 typeEffect();
-
