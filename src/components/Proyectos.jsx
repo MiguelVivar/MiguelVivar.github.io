@@ -36,8 +36,8 @@ function Proyectos() {
             imagenavif: PROYECTO2AVIF,
             imagenwebp: PROYECTO2WEBP,
             imagenpng: PROYECTO2PNG,
-            demo: "https://miguelvivar.github.io/",
-            codigo: "https://github.com/MiguelVivar/MiguelVivar.github.io",
+            demo: "#",
+            codigo: "#",
         },
         {
             titulo: "Agencia de Viajes",
@@ -46,8 +46,8 @@ function Proyectos() {
             imagenavif: PROYECTO3AVIF,
             imagenwebp: PROYECTO3WEBP,
             imagenpng: PROYECTO3PNG,
-            demo: "https://miguelvivar.github.io/",
-            codigo: "https://github.com/MiguelVivar/MiguelVivar.github.io",
+            demo: "#",
+            codigo: "https://github.com/MiguelVivar/AgenciaViajesNodeJS",
         },
         {
             titulo: "CRM de Clientes",
@@ -56,8 +56,8 @@ function Proyectos() {
             imagenavif: PROYECTO4AVIF,
             imagenwebp: PROYECTO4WEBP,
             imagenpng: PROYECTO4PNG,
-            demo: "https://miguelvivar.github.io/",
-            codigo: "https://github.com/MiguelVivar/MiguelVivar.github.io",
+            demo: "https://crmindexeddbvivar.netlify.app/",
+            codigo: "https://github.com/MiguelVivar/AgenciaViajesNodeJS",
         },
         {
             titulo: "Tienda Online",
@@ -66,8 +66,8 @@ function Proyectos() {
             imagenavif: PROYECTO5AVIF,
             imagenwebp: PROYECTO5WEBP,
             imagenpng: PROYECTO5PNG,
-            demo: "https://miguelvivar.github.io/",
-            codigo: "https://github.com/MiguelVivar/MiguelVivar.github.io",
+            demo: "#",
+            codigo: "https://github.com/MiguelVivar/CarritoCompras",
         },
         {
             titulo: "La Cafetería",
@@ -76,8 +76,8 @@ function Proyectos() {
             imagenavif: PROYECTO6AVIF,
             imagenwebp: PROYECTO6WEBP,
             imagenpng: PROYECTO6PNG,
-            demo: "https://miguelvivar.github.io/",
-            codigo: "https://github.com/MiguelVivar/MiguelVivar.github.io",
+            demo: "#",
+            codigo: "https://github.com/MiguelVivar/Cafeteria",
         },
     ];
 
