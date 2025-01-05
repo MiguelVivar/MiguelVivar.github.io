@@ -13,24 +13,24 @@ function Hero() {
 
     useEffect(() => {
         const typeEffect = () => {
-        const currentDynamic = dynamicPhrases[dynamicIndex];
+            const currentDynamic = dynamicPhrases[dynamicIndex];
 
-        if (!isDeleting && charIndex < currentDynamic.length) {
-            // Escribir un carácter
-            setCharIndex((prev) => prev + 1);
-            setDynamicText(currentDynamic.slice(0, charIndex + 1));
-        } else if (isDeleting && charIndex > 0) {
-            // Borrar un carácter
-            setCharIndex((prev) => prev - 1);
-            setDynamicText(currentDynamic.slice(0, charIndex - 1));
-        } else if (!isDeleting && charIndex === currentDynamic.length) {
-            // Pausa antes de borrar
-            setTimeout(() => setIsDeleting(true), 1000);
-        } else if (isDeleting && charIndex === 0) {
-            // Cambiar frase
-            setIsDeleting(false);
-            setDynamicIndex((prev) => (prev + 1) % dynamicPhrases.length);
-        }
+            if (!isDeleting && charIndex < currentDynamic.length) {
+                // Escribir un carácter
+                setCharIndex((prev) => prev + 1);
+                setDynamicText(currentDynamic.slice(0, charIndex + 1));
+            } else if (isDeleting && charIndex > 0) {
+                // Borrar un carácter
+                setCharIndex((prev) => prev - 1);
+                setDynamicText(currentDynamic.slice(0, charIndex - 1));
+            } else if (!isDeleting && charIndex === currentDynamic.length) {
+                // Pausa antes de borrar
+                setTimeout(() => setIsDeleting(true), 1000);
+            } else if (isDeleting && charIndex === 0) {
+                // Cambiar frase
+                setIsDeleting(false);
+                setDynamicIndex((prev) => (prev + 1) % dynamicPhrases.length);
+            }
         };
 
         const timer = setTimeout(typeEffect, isDeleting ? 50 : 100);
@@ -48,8 +48,8 @@ function Hero() {
                 Miguel <strong className="has-text-primary">Vivar</strong>
                 </h1>
                 <h2 className="subtitle is-3 typing-text">
-                    <span className="has-text-primary">Desarrollador</span>
-                    <span className="dynamic-text ">{dynamicText}</span>
+                    <span className="has-text-primary static-text">Desarrollador</span>
+                    <span className="dynamic-text">{dynamicText}</span>
                 </h2>
                 <progress className="progress is-primary"></progress>
             </div>
