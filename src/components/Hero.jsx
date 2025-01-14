@@ -22,7 +22,7 @@ function Hero() {
             } else if (isDeleting && charIndex > 0) {
                 // Borrar un carácter
                 setCharIndex((prev) => prev - 1);
-                setDynamicText(currentDynamic.slice(0, charIndex - 1));
+                setDynamicText(currentDynamic.slice(0, charIndex));
             } else if (!isDeleting && charIndex === currentDynamic.length) {
                 // Pausa antes de borrar
                 setTimeout(() => setIsDeleting(true), 1000);
@@ -49,7 +49,7 @@ function Hero() {
                 </h1>
                 <h2 className="subtitle is-3 typing-text">
                     <span className="has-text-primary static-text">Desarrollador</span>
-                    <span className="dynamic-text">{dynamicText}</span>
+                    <span className="dynamic-text">{dynamicText}</span> 
                 </h2>
                 <progress className="progress is-primary"></progress>
             </div>
@@ -57,7 +57,7 @@ function Hero() {
                 <picture className="image is-540x540">
                     <source srcSet={Miguel_VivarAVIF} type="image/avif" />
                     <source srcSet={Miguel_VivarWEBP} type="image/webp" />
-                    <img className="box" loading="lazy" src={Miguel_VivarPNG} alt="imagen mía" width="100" height="100" />
+                    <img className="box" loading="lazy" src={Miguel_VivarPNG} alt="Miguel Vivar, desarrollador de software" width="100" height="100"/>
                 </picture>
             </div>
         </section>

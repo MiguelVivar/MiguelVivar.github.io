@@ -7,7 +7,7 @@ import Herramientas from './Herramientas'
 
 function Habilidades() {
     return (
-        <section className="container mt-6 section" id="habilidades">
+        <section className="container section" id="habilidades">
             <h2 className="title is-2 has-text-centered mt-6">Mis Habilidades 🚀</h2>
             <div className="columns">
                 <div className="column">

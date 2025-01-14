@@ -65,7 +65,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 .dynamic-text {
-    border-right: 2px solid white; /* Cursor parpadeante */
+    border-right: 2px solid; /* Cursor parpadeante */
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;

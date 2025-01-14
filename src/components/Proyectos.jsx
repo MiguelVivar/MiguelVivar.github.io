@@ -82,7 +82,7 @@ function Proyectos() {
     ];
 
     return (
-        <section className="container section mt-6" id='proyectos'>
+        <section className="container section" id='proyectos'>
             <h1 className="title has-text-centered is-2 mt-6">Mis Proyectos 💡</h1>
             <p className="subtitle is-4 has-text-centered">Explora algunos de los trabajos que he realizado.</p>
 

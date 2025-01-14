@@ -35,7 +35,7 @@ function Sobremi() {
                         </span>
                         <span>Instagram</span>
                     </a>
-                    <a className="button is-large is-primary" href="https://drive.google.com/file/d/1d5dJV6rO95vS8PZiaG7AB6PVA1Pzb81D/view?usp=sharing" target="_blank">
+                    <a className="button is-large is-primary" href="https://docs.google.com/document/d/1Jo8Nd2-7r0L_dINTaHM88493LuKsEhfAAyRfLTMVv8s/edit?usp=sharing" target="_blank">
                         <span className="icon">
                             <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor"  strokelinecap="round" strokelinejoin="round" width={24} height={24}  strokeWidth={2}> <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path> <path d="M7 11l5 5l5 -5"></path> <path d="M12 4l0 12"></path> </svg> 
                         </span>
