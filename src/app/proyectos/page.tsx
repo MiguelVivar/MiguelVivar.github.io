@@ -3,124 +3,11 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaGithub, FaExternalLinkAlt, FaJava } from 'react-icons/fa';
-import { SiReact, SiNextdotjs, SiTailwindcss, SiFramer, SiNodedotjs, SiExpress, SiMongodb, SiJsonwebtokens, SiPug, SiBootstrap, SiMysql, SiHeroku, SiChatbot } from 'react-icons/si';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { proyectos, categorias } from '@/data/proyectos';
 
 export default function Proyectos() {
   const [categoriaActiva, setCategoriaActiva] = useState('todos');
-
-  const proyectos = [
-    {
-      titulo: "Portafolio Personal",
-      descripcion: "Sitio web personal para mostrar proyectos y habilidades, con animaciones fluidas y diseño responsivo.",
-      imagen: "/portafolio.png",
-      tecnologias: [
-        { nombre: "Next.js", icono: <SiNextdotjs className="text-xl" /> },
-        { nombre: "React", icono: <SiReact className="text-xl" /> },
-        { nombre: "Tailwind CSS", icono: <SiTailwindcss className="text-xl" /> },
-        { nombre: "Framer Motion", icono: <SiFramer className="text-xl" /> },
-      ],
-      enlaces: [
-        { tipo: "github", url: "https://github.com/username/portfolio" },
-        { tipo: "demo", url: "https://portfolio-demo.com" },
-      ],
-      destacado: true,
-      categoria: "Front-End"
-    },
-    {
-      titulo: "Administrador de Veterinaria",
-      descripcion: "Un sistema de administración de una veterinaria con autenticación de usuarios.",
-      imagen: "/administradorveterinaria.png",
-      tecnologias: [
-        { nombre: "React", icono: <SiReact className="text-xl" /> },
-        { nombre: "Tailwind CSS", icono: <SiTailwindcss className="text-xl" /> },
-        { nombre: "NodeJS", icono: <SiNodedotjs className="text-xl" /> },
-        { nombre: "Express", icono: <SiExpress className="text-xl" /> },
-        { nombre: "MongoDB", icono: <SiMongodb className="text-xl" /> },
-        { nombre: "JWT", icono: <SiJsonwebtokens className="text-xl" /> },
-      ],
-      enlaces: [
-        { tipo: "github", url: "https://github.com/MiguelVivar/APV_MERN_frontend" },
-      ],
-      destacado: true,
-      categoria: "Full-Stack"
-    },
-    {
-      titulo: "Agencia de Viajes",
-      descripcion: "Un sitio web para una agencia de viajes con un diseño moderno y responsivo.",
-      imagen: "/agenciaviajes.png",
-      tecnologias: [
-        { nombre: "Pug", icono: <SiPug className="text-xl" /> },
-        { nombre: "NodeJS", icono: <SiNodedotjs className="text-xl" /> },
-        { nombre: "Boostrap", icono: <SiBootstrap className="text-xl" /> },
-        { nombre: "MySQL", icono: <SiMysql className="text-xl" /> },
-        { nombre: "Heroku", icono: <SiHeroku className="text-xl" /> },
-      ],
-      enlaces: [
-        { tipo: "github", url: "https://github.com/MiguelVivar/AgenciaViajesNodeJS" },
-      ],
-      destacado: false,
-      categoria: "Full-Stack"
-    },
-    {
-      titulo: "Portafolio VinnBonn",
-      descripcion: "Portafolio para mostrar proyectos y habilidades, con animaciones fluidas y diseño responsivo.",
-      imagen: "/vinnbonn.png",
-      tecnologias: [
-        { nombre: "Next.js", icono: <SiNextdotjs className="text-xl" /> },
-        { nombre: "React", icono: <SiReact className="text-xl" /> },
-        { nombre: "Tailwind CSS", icono: <SiTailwindcss className="text-xl" /> },
-        { nombre: "Framer Motion", icono: <SiFramer className="text-xl" /> },
-      ],
-      enlaces: [
-        { tipo: "github", url: "https://github.com/MiguelVivar/VinnBonn" },
-        { tipo: "demo", url: "https://vinn-bonn.vercel.app/" },
-      ],
-      destacado: false,
-      categoria: "Front-End"
-    },
-    {
-      titulo: "AiAssistEdu",
-      descripcion: "Sitio web sobre una IA para la educación, cuenta con un chatbot capaz de generar tickets de soporte.",
-      imagen: "/aiassistedu.png",
-      tecnologias: [
-        { nombre: "React", icono: <SiReact className="text-xl" /> },
-        { nombre: "Tailwind CSS", icono: <SiTailwindcss className="text-xl" /> },
-        { nombre: "Voiceflow", icono: <SiChatbot className="text-xl" /> },
-      ],
-      enlaces: [
-        { tipo: "demo", url: "https://gjpf.edu.pe/aiassistedu/" },
-      ],
-      destacado: false,
-      categoria: "Front-End"
-    },
-    {
-      titulo: "SistemaAdmison",
-      descripcion: "Aplicación que gestiona el proceso de admisión académica. Utiliza el patrón MVC y permite leer datos desde archivos DBF, mostrando los resultados de manera organizada en una interfaz gráfica.",
-      imagen: "/sistemaadmision.png",
-      tecnologias: [
-        { nombre: "Java", icono: <FaJava className="text-xl" /> }
-      ],
-      enlaces: [
-        { tipo: "github", url: "https://github.com/MiguelVivar/SistemaAdmision" },
-      ],
-      destacado: true,
-      categoria: "Software"
-    },
-    {
-      titulo: "GeneradorExamenes",
-      descripcion: "Aplicación que genera exámenes de forma automatizada. Desarrollada en Java con NetBeans, permite organizar preguntas y respuestas en un formato estructurado para su aplicación.",
-      imagen: "/generadorexamenes.png",
-      tecnologias: [
-        { nombre: "Java", icono: <FaJava className="text-xl" /> }
-      ],
-      enlaces: [
-        { tipo: "github", url: "https://github.com/MiguelVivar/GeneradorExamenes" },
-      ],
-      destacado: false,
-      categoria: "Software"
-    },
-  ];
 
   // Filtrar proyectos destacados para mostrarlos primero
   const proyectosOrdenados = [
@@ -133,14 +20,7 @@ export default function Proyectos() {
     ? proyectosOrdenados
     : proyectosOrdenados.filter(proyecto => proyecto.categoria === categoriaActiva);
 
-  // Categorías para el filtro
-  const categorias = [
-    { id: 'todos', nombre: 'Todos' },
-    { id: 'Full-Stack', nombre: 'Full-Stack' },
-    { id: 'Front-End', nombre: 'Front-End' },
-    { id: 'Back-End', nombre: 'Back-End' },
-    { id: 'Software', nombre: 'Software' },
-  ];
+  // Usar las categorías importadas desde data/proyectos.tsx
 
   return (
     <main className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-neutral-900 pt-24">
@@ -299,7 +179,7 @@ export default function Proyectos() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="https://github.com/username" // Reemplazar con tu usuario de GitHub real
+              href="https://github.com/MiguelVivar"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 border-2 border-emerald-300 text-emerald-300 rounded-lg font-bold hover:bg-emerald-300 hover:text-neutral-800 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/50 text-sm sm:text-base inline-flex items-center gap-2"
