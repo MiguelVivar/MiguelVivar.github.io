@@ -1,4 +1,4 @@
-import { FaJava } from 'react-icons/fa';
+import { FaJava, FaCode, FaLayerGroup, FaDesktop, FaServer } from 'react-icons/fa';
 import { SiReact, SiNextdotjs, SiTailwindcss, SiFramer, SiNodedotjs, SiExpress, SiMongodb, SiJsonwebtokens, SiPug, SiBootstrap, SiMysql, SiHeroku, SiChatbot, SiVite } from 'react-icons/si';
 
 export const proyectos = [
@@ -150,9 +150,9 @@ export const proyectos = [
 
 // Categorías para el filtro
 export const categorias = [
-  { id: 'todos', nombre: 'Todos' },
-  { id: 'Full-Stack', nombre: 'Full-Stack' },
-  { id: 'Front-End', nombre: 'Front-End' },
-  { id: 'Back-End', nombre: 'Back-End' },
-  { id: 'Software', nombre: 'Software' },
+  { id: 'todos', nombre: 'Todos', icono: <FaCode className="text-xl" /> },
+  { id: 'Full-Stack', nombre: 'Full-Stack', icono: <FaLayerGroup className="text-xl" /> },
+  { id: 'Front-End', nombre: 'Front-End', icono: <FaDesktop className="text-xl" /> },
+  { id: 'Back-End', nombre: 'Back-End', icono: <FaServer className="text-xl" /> },
+  { id: 'Software', nombre: 'Software', icono: <FaCode className="text-xl" /> },
 ];

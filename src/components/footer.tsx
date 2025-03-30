@@ -282,8 +282,8 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.7 }}
             className="mt-3 md:mt-0 italic"
           >
-            "{rolTexto}
-            <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>"
+            &quot;{rolTexto}
+            <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>&quot;
           </motion.p>
           <motion.p 
             initial={{ opacity: 0 }}

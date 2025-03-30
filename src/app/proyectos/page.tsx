@@ -28,7 +28,7 @@ export default function Proyectos() {
     
     // Simular tiempo de carga para una mejor experiencia visual
     const tiempoEspera = setTimeout(() => {
-      setProyectosMostrados(proyectosFiltrados);
+      setProyectosMostrados([...proyectosFiltrados]);
       setCargando(false);
     }, 300);
     
@@ -155,9 +155,9 @@ export default function Proyectos() {
               ) : (
                 proyectosMostrados.map((proyecto) => (
                   <motion.div
-                    key={proyecto.titulo}
+                    key={proyecto && 'titulo' in proyecto ? proyecto.titulo : ''}
                     variants={elementoVariantes}
-                    className={`bg-neutral-800 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 group relative ${proyecto.destacado ? 'border-t-2 border-emerald-300' : 'border-t-2 border-neutral-700'}`}
+                    className={`bg-neutral-800 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 group relative ${(proyecto as { destacado?: boolean })?.destacado ? 'border-t-2 border-emerald-300' : 'border-t-2 border-neutral-700'}`}
                     whileHover={{ 
                       y: -5,
                       transition: { duration: 0.2 }
@@ -165,7 +165,7 @@ export default function Proyectos() {
                     whileTap={{ scale: 0.98 }}
                   >
                     {/* Etiqueta de proyecto destacado */}
-                    {proyecto.destacado && (
+                    {(proyecto as { destacado?: boolean }).destacado && (
                       <div className="absolute top-0 right-0 bg-emerald-300 text-neutral-900 text-xs font-bold px-3 py-1 rounded-bl-lg z-10 flex items-center gap-1">
                         <FaStar className="text-yellow-500" />
                         Destacado
@@ -186,10 +186,10 @@ export default function Proyectos() {
                     {/* Contenido del proyecto */}
                     <div className="p-6">
                       <h3 className="text-xl font-bold text-white group-hover:text-emerald-300 transition-colors duration-300 mb-2">
-                        {proyecto.titulo}
+                        {(proyecto as { titulo: string }).titulo}
                       </h3>
                       <p className="text-gray-400 mb-4 line-clamp-3">
-                        {proyecto.descripcion}
+                        {(proyecto as { descripcion: string }).descripcion}
                       </p>
                       
                       {/* Tecnologías utilizadas */}

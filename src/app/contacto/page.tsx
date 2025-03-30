@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaDownload } from 'react-icons/fa';
@@ -15,12 +15,6 @@ export default function Contacto() {
   const [enviando, setEnviando] = useState(false);
   const [enviado, setEnviado] = useState(false);
   const [error, setError] = useState('');
-  const [animacionActiva, setAnimacionActiva] = useState(false);
-
-  // Activar animaciones después de cargar la página
-  useEffect(() => {
-    setAnimacionActiva(true);
-  }, []);
 
   // Manejar cambios en los campos del formulario
   const manejarCambio = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -284,7 +278,7 @@ export default function Contacto() {
               <h2 className="text-2xl font-bold text-white mb-6">Información de contacto</h2>
               
               <div className="space-y-4">
-                {infoContacto.map((item, index) => (
+                {infoContacto.map((item) => (
                   <motion.a
                     key={item.titulo}
                     href={item.enlace}
@@ -315,7 +309,7 @@ export default function Contacto() {
               <h2 className="text-2xl font-bold text-white mb-6">Conecta conmigo</h2>
               
               <div className="space-y-4">
-                {redesSociales.map((red, index) => (
+                {redesSociales.map((red) => (
                   <motion.a
                     key={red.nombre}
                     href={red.enlace}

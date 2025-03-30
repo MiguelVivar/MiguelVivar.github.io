@@ -133,7 +133,7 @@ export default function Home() {
               transition={{ delay: 0.8, duration: 0.5 }}
               className="flex flex-wrap gap-3 pt-4 justify-center md:justify-start"
             >
-              {['React', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind CSS'].map((tech, index) => (
+              {['React', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind CSS'].map((tech) => (
                 <span 
                   key={tech}
                   className="px-3 py-1 bg-neutral-800 text-gray-300 rounded-full text-xs font-medium border border-neutral-700 hover:border-emerald-300/50 hover:text-emerald-300 transition-colors duration-300"
