@@ -1,4 +1,4 @@
-import { FaHtml5, FaCss3, FaSass, FaBootstrap, FaReact, FaNodeJs, FaGithub, FaFigma, FaJava, FaPython } from 'react-icons/fa';
+import { FaHtml5, FaCss3, FaSass, FaBootstrap, FaReact, FaNodeJs, FaGithub, FaFigma, FaJava, FaPython, FaLaptopCode, FaServer, FaCode, FaTools, FaLayerGroup } from 'react-icons/fa';
 import { TbBrandCSharp } from "react-icons/tb";
 import { SiJavascript, SiNextdotjs, SiTailwindcss, SiTypescript, SiFramer, SiExpress, SiMongodb, SiJest, SiBulma, SiVite, SiGit, SiCypress, SiPostman } from 'react-icons/si';
 import { BsKanban, BsSearch } from 'react-icons/bs';
@@ -8,6 +8,7 @@ import { AiOutlineApartment } from 'react-icons/ai';
 export const categoriasHabilidades = [
   {
     titulo: "Front-End",
+    icono: <FaLaptopCode className="text-emerald-300 text-2xl" />,
     habilidades: [
       { nombre: "HTML5", nivel: "Avanzado", icono: <FaHtml5 className="text-2xl" /> },
       { nombre: "CSS3", nivel: "Avanzado", icono: <FaCss3 className="text-2xl" /> },
@@ -25,6 +26,7 @@ export const categoriasHabilidades = [
   },
   {
     titulo: "Back-End",
+    icono: <FaServer className="text-emerald-300 text-2xl" />,
     habilidades: [
       { nombre: "Node.js", nivel: "Avanzado", icono: <FaNodeJs className="text-2xl" /> },
       { nombre: "Express", nivel: "Avanzado", icono: <SiExpress className="text-2xl" /> },
@@ -34,6 +36,7 @@ export const categoriasHabilidades = [
   },
   {
     titulo: "Lenguajes de Programación",
+    icono: <FaCode className="text-emerald-300 text-2xl" />,
     habilidades: [
       { nombre: "Python", nivel: "Intermedio", icono: <FaPython className="text-2xl" /> },
       { nombre: "Java", nivel: "Intermedio", icono: <FaJava className="text-2xl" /> },
@@ -42,6 +45,7 @@ export const categoriasHabilidades = [
   },
   {
     titulo: "Herramientas",
+    icono: <FaTools className="text-emerald-300 text-2xl" />,
     habilidades: [
       { nombre: "Git", nivel: "Avanzado", icono: <SiGit className="text-2xl" /> },
       { nombre: "GitHub", nivel: "Avanzado", icono: <FaGithub className="text-2xl" /> },
@@ -53,6 +57,7 @@ export const categoriasHabilidades = [
   },
   {
     titulo: "Otros",
+    icono: <FaLayerGroup className="text-emerald-300 text-2xl" />,
     habilidades: [
         { nombre: "Responsive Design", nivel: "Avanzado", icono: <MdDevices className="text-2xl" /> },
         { nombre: "UI/UX Design", nivel: "Intermedio", icono: <MdOutlineDesignServices className="text-2xl" /> },
