@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaGithub, FaExternalLinkAlt, FaSearch, FaStar } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaStar } from 'react-icons/fa';
 import { proyectos, categorias } from '@/data/proyectos';
 
 export default function Proyectos() {
@@ -28,7 +28,7 @@ export default function Proyectos() {
     
     // Simular tiempo de carga para una mejor experiencia visual
     const tiempoEspera = setTimeout(() => {
-      setProyectosMostrados([...proyectosFiltrados]);
+      setProyectosMostrados(proyectosFiltrados as typeof proyectosMostrados);
       setCargando(false);
     }, 300);
     
@@ -115,9 +115,7 @@ export default function Proyectos() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {categoria.id === 'todos' ? (
-                  <FaSearch className="text-xs" />
-                ) : categoria.icono}
+                {categoria.icono}
                 {categoria.nombre}
               </motion.button>
             ))}
@@ -155,9 +153,9 @@ export default function Proyectos() {
               ) : (
                 proyectosMostrados.map((proyecto) => (
                   <motion.div
-                    key={proyecto && 'titulo' in proyecto ? proyecto.titulo : ''}
+                    key={(proyecto as { titulo: string }).titulo}
                     variants={elementoVariantes}
-                    className={`bg-neutral-800 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 group relative ${(proyecto as { destacado?: boolean })?.destacado ? 'border-t-2 border-emerald-300' : 'border-t-2 border-neutral-700'}`}
+                    className={`bg-neutral-800 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 group relative ${(proyecto as { destacado?: boolean }).destacado ? 'border-t-2 border-emerald-300' : 'border-t-2 border-neutral-700'}`}
                     whileHover={{ 
                       y: -5,
                       transition: { duration: 0.2 }
@@ -175,8 +173,8 @@ export default function Proyectos() {
                     {/* Imagen del proyecto con overlay */}
                     <div className="relative h-48 w-full overflow-hidden">
                       <Image 
-                        src={proyecto.imagen} 
-                        alt={`Imagen del proyecto ${proyecto.titulo}`}
+                        src={(proyecto as { imagen: string }).imagen}
+                        alt={`Imagen del proyecto ${(proyecto as { titulo: string }).titulo}`}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
@@ -196,7 +194,7 @@ export default function Proyectos() {
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-white mb-2">Tecnologías</h4>
                         <div className="flex flex-wrap gap-2">
-                          {proyecto.tecnologias.map((tech, techIndex) => (
+                          {(proyecto as { tecnologias: Array<{ nombre: string, icono: React.ReactNode }> }).tecnologias.map((tech, techIndex) => (
                             <motion.span 
                               key={techIndex} 
                               className="inline-flex items-center gap-1 bg-neutral-700 px-2 py-1 rounded text-xs text-gray-300 hover:bg-neutral-600 transition-colors duration-200"
@@ -214,7 +212,7 @@ export default function Proyectos() {
                       {/* Enlaces del proyecto */}
                       <div className="flex justify-between items-center pt-2 border-t border-neutral-700">
                         <div className="flex space-x-3">
-                          {proyecto.enlaces.map((enlace, enlaceIndex) => (
+                          {(proyecto as { enlaces: Array<{ tipo: string, url: string }> }).enlaces.map((enlace, enlaceIndex) => (
                             <Link 
                               key={enlaceIndex} 
                               href={enlace.url} 
