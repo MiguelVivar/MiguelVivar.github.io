@@ -1,7 +1,7 @@
-import { FaHtml5, FaCss3, FaSass, FaBootstrap, FaReact, FaNodeJs, FaGithub, FaFigma, FaJava, FaPython, FaLaptopCode, FaServer, FaCode, FaTools, FaLayerGroup } from 'react-icons/fa';
+import { FaHtml5, FaCss3, FaSass, FaBootstrap, FaReact, FaNodeJs, FaGithub, FaFigma, FaJava, FaPython, FaLaptopCode, FaServer, FaCode, FaTools, FaLayerGroup, FaPhp } from 'react-icons/fa';
 import { TbBrandCSharp } from "react-icons/tb";
-import { SiJavascript, SiNextdotjs, SiTailwindcss, SiTypescript, SiFramer, SiExpress, SiMongodb, SiJest, SiBulma, SiVite, SiGit, SiCypress, SiPostman } from 'react-icons/si';
-import { BsKanban, BsSearch } from 'react-icons/bs';
+import { SiJavascript, SiNextdotjs, SiTailwindcss, SiTypescript, SiFramer, SiExpress, SiMongodb, SiJest, SiBulma, SiVite, SiGit, SiCypress, SiPostman, SiMysql, SiPostgresql } from 'react-icons/si';
+import { BsKanban, BsSearch, BsServer } from 'react-icons/bs';
 import { MdOutlineDesignServices, MdDevices } from 'react-icons/md';
 import { AiOutlineApartment } from 'react-icons/ai';
 
@@ -29,9 +29,17 @@ export const categoriasHabilidades = [
     icono: <FaServer className="text-emerald-300 text-2xl" />,
     habilidades: [
       { nombre: "Node.js", nivel: "Avanzado", icono: <FaNodeJs className="text-2xl" /> },
-      { nombre: "Express", nivel: "Avanzado", icono: <SiExpress className="text-2xl" /> },
+      { nombre: "Express", nivel: "Avanzado", icono: <SiExpress className="text-2xl" /> }
+    ],
+  },
+  {
+    titulo: "Bases de Datos",
+    icono: <AiOutlineApartment className="text-emerald-300 text-2xl" />,
+    habilidades: [
       { nombre: "MongoDB", nivel: "Intermedio", icono: <SiMongodb className="text-2xl" /> },
-      { nombre: "SQL", nivel: "Intermedio", icono: <AiOutlineApartment className="text-2xl" /> }
+      { nombre: "MySQL", nivel: "Intermedio", icono: <SiMysql className="text-2xl" /> },
+      { nombre: "SQLServer", nivel: "Intermedio", icono: <BsServer className="text-2xl" /> },
+      { nombre: "PostgreSQL", nivel: "Intermedio", icono: <SiPostgresql className="text-2xl" /> }
     ],
   },
   {
@@ -40,6 +48,7 @@ export const categoriasHabilidades = [
     habilidades: [
       { nombre: "Python", nivel: "Intermedio", icono: <FaPython className="text-2xl" /> },
       { nombre: "Java", nivel: "Intermedio", icono: <FaJava className="text-2xl" /> },
+      { nombre: "PHP", nivel: "Intermedio", icono: <FaPhp className="text-2xl" /> },
       { nombre: "C#", nivel: "Intermedio", icono: <TbBrandCSharp className="text-2xl" /> }
     ],
   },
@@ -50,9 +59,9 @@ export const categoriasHabilidades = [
       { nombre: "Git", nivel: "Avanzado", icono: <SiGit className="text-2xl" /> },
       { nombre: "GitHub", nivel: "Avanzado", icono: <FaGithub className="text-2xl" /> },
       { nombre: "Figma", nivel: "Intermedio", icono: <FaFigma className="text-2xl" /> },
-      { nombre: "Jest", nivel: "Intermedio", icono: <SiJest className="text-2xl" /> },
-      { nombre: "Cypress", nivel: "Intermedio", icono: <SiCypress className="text-2xl" /> },
-      { nombre: "Postman", nivel: "Intermedio", icono: <SiPostman className="text-2xl" /> }
+      { nombre: "Postman", nivel: "Intermedio", icono: <SiPostman className="text-2xl" /> },
+      { nombre: "Jest", nivel: "Básico", icono: <SiJest className="text-2xl" /> },
+      { nombre: "Cypress", nivel: "Básico", icono: <SiCypress className="text-2xl" /> }
     ],
   },
   {
