@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaSpotify, FaHeadphones, FaPause, FaPlay, FaVolumeUp, FaExclamationTriangle } from 'react-icons/fa';
-import Image from 'next/image';
 
 interface SpotifyData {
   isPlaying: boolean;
