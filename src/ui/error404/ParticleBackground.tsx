@@ -1,36 +1,33 @@
 'use client';
 
-import React, { useCallback } from 'react';
-import { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import type { Engine } from "tsparticles-engine";
 
-// Define proper interface for particles props
-interface ParticlesProps {
-  id: string;
-  options: Record<string, unknown>;
-  [key: string]: unknown;
-}
+// Import the correct types from react-tsparticles
+import type { IParticlesProps } from "react-tsparticles";
 
 const ParticleBackground: React.FC = () => {
-  const [ParticlesComponent, setParticlesComponent] = useState<React.ComponentType<ParticlesProps> | null>(null);
+  // State for dynamic components
+  const [Particles, setParticles] = useState<React.ComponentType<IParticlesProps> | null>(null);
+  const [particlesInitializer, setParticlesInitializer] = useState<((engine: Engine) => Promise<void>) | null>(null);
+  
+  // Define particlesInit at the top level
+  const particlesInit = useCallback(async (engine: Engine) => {
+    if (particlesInitializer) {
+      return await particlesInitializer(engine);
+    }
+  }, [particlesInitializer]);
 
+  // Load particles dynamically
   useEffect(() => {
-    // Dynamic import to prevent SSR issues and ensure proper React 19 compatibility
     const loadParticles = async () => {
       try {
         // Import dynamically to fix compatibility issues
-        const { default: Particles } = await import('react-tsparticles');
+        const { default: ReactParticles } = await import('react-tsparticles');
         const { loadSlim } = await import('tsparticles-slim');
         
-        const ParticlesWithInit = (props: ParticlesProps) => {
-          const particlesInit = useCallback(async (engine: Engine) => {
-            return await loadSlim(engine);
-          }, []);
-          
-          return <Particles init={particlesInit} {...props} />;
-        };
-        
-        setParticlesComponent(ParticlesWithInit);
+        setParticles(() => ReactParticles);
+        setParticlesInitializer(async (engine: Engine) => await loadSlim(engine));
       } catch (error) {
         console.error("Failed to load particles:", error);
       }
@@ -39,15 +36,17 @@ const ParticleBackground: React.FC = () => {
     loadParticles();
   }, []);
 
-  if (!ParticlesComponent) {
+  if (!Particles) {
     // Return a simple placeholder until particles load
     return <div className="absolute inset-0 z-0 bg-transparent"></div>;
   }
 
+  // Use the imported component correctly
   return (
     <div className="absolute inset-0 z-0">
-      <ParticlesComponent
+      <Particles
         id="tsparticles"
+        init={particlesInit}
         options={{
           background: {
             color: {
