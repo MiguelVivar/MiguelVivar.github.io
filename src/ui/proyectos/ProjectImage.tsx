@@ -1,8 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
+import { StaticImageData } from 'next/image';
 
 interface ProjectImageProps {
-  src: string;
+  src: string | StaticImageData;
   alt: string;
   className?: string;
 }

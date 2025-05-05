@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import ProfilePicture from '../../assets/images/perfil.png';
+import Link from 'next/link';
 
 const ProfileImage: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -319,15 +320,15 @@ const ProfileImage: React.FC = () => {
                       transition={{ duration: 0.3, delay: 0.2 }}
                       className="mt-4"
                     >
-                      <a 
-                        href="#contacto"
+                      <Link
+                        href="/contacto"
                         className="inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white text-sm font-medium py-1.5 px-3 rounded-md transition-all duration-300 shadow-lg shadow-emerald-600/20 hover:shadow-emerald-700/40"
                       >
                         <span>Trabajemos juntos</span>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
-                      </a>
+                      </Link>
                     </motion.div>
                   )}
                 </AnimatePresence>

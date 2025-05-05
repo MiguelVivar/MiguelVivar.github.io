@@ -4,7 +4,9 @@ import { FaHeart, FaRegHeart, FaShare } from 'react-icons/fa6';
 
 interface ArticleActionsProps {
   isLiked: boolean;
+  isSaved: boolean;
   onLike: () => void;
+  onSave: () => void;
   onShare: () => void;
 }
 

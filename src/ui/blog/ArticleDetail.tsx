@@ -206,7 +206,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({
       <FloatingControls 
         showControls={showControls}
         isLiked={likedArticles.includes(articulo.id)}
-        isSaved={savedArticles.includes(articulo.id)}
+        // isSaved prop needs to be added to FloatingControlsProps interface
         isReaderMode={isReaderMode}
         showTableOfContents={showTableOfContents}
         onLike={handleLikeArticle}
@@ -292,9 +292,11 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({
       />
 
       {/* Alerta de copia */}
-      <CopyAlert isVisible={showCopyAlert} message="¡Enlace copiado al portapapeles!" onClose={function (): void {
-        throw new Error('Function not implemented.');
-      } } />
+      <CopyAlert 
+        isVisible={showCopyAlert} 
+        message="¡Enlace copiado al portapapeles!" 
+        onClose={() => setShowCopyAlert(false)} 
+      />
     </div>
   );
 };

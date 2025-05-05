@@ -5,12 +5,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaHeart, FaRegHeart, FaList, FaShare } from 'react-icons/fa6';
 
 interface FloatingControlsProps {
-  isLiked: boolean;
-  showTableOfContents: boolean;
   showControls: boolean;
+  isLiked: boolean;
+  isSaved?: boolean;
+  isReaderMode: boolean;
+  showTableOfContents: boolean;
   onLike: () => void;
-  onShare: () => void;
+  onSave: () => void;
+  onToggleReaderMode: () => void;
   onToggleTableOfContents: () => void;
+  onShare: () => void;
 }
 
 // Componente de Tooltip mejorado

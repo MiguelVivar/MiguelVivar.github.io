@@ -1,30 +1,26 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { JSX, useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectFeatureBadge from './ProjectFeatureBadge';
 import ProjectImage from './ProjectImage';
 import TechnologyBadge from './TechnologyBadge';
 import ProjectLinks from './ProjectLinks';
 import ProjectDetails from './ProjectDetails';
+import { StaticImageData } from 'next/image';
 
 // Tipo para el proyecto
-interface Proyecto {
-  id: string | number;
-  titulo: string;
-  descripcion: string;
-  imagen: string;
-  destacado?: boolean;
-  porcentajeAvance?: string;
-  tecnologias: Array<{
-    nombre: string;
-    icono: React.ReactNode;
-  }>;
-  enlaces: Array<{
-    tipo: string;
-    url: string;
-  }>;
-  categoria?: string;
+declare global {
+  interface Proyecto {
+    id: number;
+    titulo: string;
+    descripcion: string;
+    imagen: string | StaticImageData;
+    tecnologias: { nombre: string; icono: JSX.Element; }[];
+    enlaces: { tipo: string; url: string; }[];
+    destacado: boolean;
+    categoria: string;
+  }
 }
 
 interface ProjectCardProps {

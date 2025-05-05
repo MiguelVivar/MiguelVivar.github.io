@@ -16,6 +16,20 @@ import { TbBrandCSharp } from "react-icons/tb";
 // Import our new markdown utilities
 import { getAllPostSlugs, getPostData } from '@/utils/markdown';
 
+// Define interface for post data
+interface PostData {
+  id?: number;
+  slug: string;
+  title: string;
+  date: string;
+  summary?: string;
+  image?: string;
+  category?: string;
+  tags?: string[];
+  iconos?: Array<{ nombre: string; icon: string }>;
+  contentHtml: string;
+}
+
 // Create icon elements rather than returning components
 const IconFactory = (iconName: string) => {
   const iconMap = {
@@ -63,7 +77,7 @@ const IconFactory = (iconName: string) => {
 // Generate metadata for the page
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   try {
-    const post = await getPostData(params.slug);
+    const post = await getPostData(params.slug) as PostData;
     
     return {
       title: `${post.title} | Miguel Vivar Blog`,
@@ -75,31 +89,23 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         type: 'article'
       }
     };
-  } catch (error) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  } catch (error: unknown) {
     return {
-      title: 'Post Not Found | Miguel Vivar Blog'
+      title: 'Artículo no Encontrado | Miguel Vivar Blog'
     };
   }
-}
-
-// Generate static params for all blog posts
-export async function generateStaticParams() {
-  const posts = getAllPostSlugs();
-  
-  return posts.map((post) => ({
-    slug: post.params.slug,
-  }));
 }
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   try {
     // Get processed post data with HTML content
-    const entrada = await getPostData(params.slug);
+    const entrada = await getPostData(params.slug) as PostData;
     
     // Get all posts for navigation and related articles
     const allPosts = getAllPostSlugs().map(post => post.params.slug);
     const postsData = await Promise.all(
-      allPosts.map(async (slug) => await getPostData(slug))
+      allPosts.map(async (slug) => await getPostData(slug) as PostData)
     );
     
     // Sort posts by date for previous/next navigation
@@ -125,7 +131,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         item.slug !== entrada.slug && 
         (item.category === entrada.category || 
           (item.tags && entrada.tags && 
-          item.tags.some(tag => entrada.tags.includes(tag))))
+          item.tags.some((tag: string) => entrada.tags?.includes(tag))))
       ) 
       .slice(0, 3)
       .map(item => ({
@@ -133,8 +139,8 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         titulo: item.title,
         slug: item.slug,
         fecha: item.date,
-        imagen: item.image,
-        categoria: item.category
+        imagen: item.image || '',
+        categoria: item.category || ''
       }));
     
     // Estimate reading time (approx. 225 words per minute)
@@ -145,21 +151,28 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     
     const tiempoLectura = estimateReadingTime(entrada.contentHtml || '');
     
+    // Filter out null icons before assigning to the object
+    const iconosFiltered = entrada.iconos ? 
+      entrada.iconos
+        .map((tech: { nombre: string; icon: string; }) => {
+          const icon = tech.icon ? IconFactory(tech.icon) : null;
+          return icon ? { nombre: tech.nombre, icono: icon } : null;
+        })
+        .filter(Boolean) as { nombre: string; icono: React.JSX.Element }[]
+      : [];
+    
     // Create article object with the format expected by ArticleDetail
     const articulo = {
       id: entrada.id || 0,
       titulo: entrada.title,
       slug: entrada.slug,
       fecha: entrada.date,
-      resumen: entrada.summary,
-      imagen: entrada.image,
-      categoria: entrada.category,
+      resumen: entrada.summary || '',
+      imagen: entrada.image || '',
+      categoria: entrada.category || '',
       tags: entrada.tags || [],
       tiempoLectura,
-      iconos: entrada.iconos ? entrada.iconos.map((tech: { nombre: string; icon: string; }) => ({
-        nombre: tech.nombre,
-        icono: tech.icon ? IconFactory(tech.icon) : null
-      })).filter((icon: any) => icon.icono !== null) : [],
+      iconos: iconosFiltered,
       contenido: entrada.contentHtml
     };
   
@@ -171,7 +184,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         relacionados={relacionados}
       />
     );
-  } catch (error) {
+  } catch {
     notFound();
   }
 }

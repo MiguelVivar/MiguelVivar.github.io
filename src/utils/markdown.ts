@@ -4,13 +4,31 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 
+// Interfaces para tipado
+interface PostFrontMatter {
+  title: string;
+  date: string;
+  author?: string;
+  excerpt?: string;
+  tags?: string[];
+  [key: string]: string | string[] | undefined; // Tipos más específicos para propiedades adicionales
+}
+
+interface Post extends PostFrontMatter {
+  slug: string;
+}
+
+interface PostWithContent extends Post {
+  contentHtml: string;
+}
+
 // Directory where blog posts are stored
 const postsDirectory = path.join(process.cwd(), 'src/content/blog');
 
 /**
  * Get all blog posts metadata
  */
-export function getAllPosts() {
+export function getAllPosts(): Post[] {
   // Get all file names under /content/blog
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
@@ -27,8 +45,8 @@ export function getAllPosts() {
     // Combine the data with the slug
     return {
       slug,
-      ...frontMatter,
-    };
+      ...(frontMatter as PostFrontMatter),
+    } as Post;
   });
 
   // Sort posts by date in descending order
@@ -44,7 +62,7 @@ export function getAllPosts() {
 /**
  * Get data for a specific post by slug
  */
-export async function getPostData(slug: string) {
+export async function getPostData(slug: string): Promise<PostWithContent> {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -62,8 +80,8 @@ export async function getPostData(slug: string) {
   return {
     slug,
     contentHtml,
-    ...frontMatter,
-  };
+    ...(frontMatter as PostFrontMatter),
+  } as PostWithContent;
 }
 
 /**

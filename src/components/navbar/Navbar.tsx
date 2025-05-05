@@ -9,8 +9,8 @@ import Logo from './Logo';
 import DesktopMenu from './DesktopMenu';
 import MobileToggle from './MobileToggle';
 import MobileMenu from './MobileMenu';
-import { IconType } from 'react-icons';
 import { FaHome, FaUser, FaProjectDiagram, FaCode, FaBook } from 'react-icons/fa';
+import { IconType } from 'react-icons';
 
 const Navbar: React.FC = () => {
   // Usar los estados globales

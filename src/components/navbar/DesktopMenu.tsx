@@ -2,12 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import NavLink from './NavLink';
 import ContactButton from './ContactButton';
+import { IconType } from 'react-icons';
 
 interface DesktopMenuProps {
   links: {
     href: string;
     label: string;
-    icon: React.ComponentType<unknown>;
+    icon: IconType;
   }[];
   currentPath: string;
 }
