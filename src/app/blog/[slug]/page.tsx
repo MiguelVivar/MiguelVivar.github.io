@@ -74,6 +74,14 @@ const IconFactory = (iconName: string) => {
   return null;
 };
 
+export async function generateStaticParams() {
+  const slugs = getAllPostSlugs();
+
+  return slugs.map(({ params }) => ({
+    slug: params.slug,
+  }));
+}
+
 // Generate metadata for the page
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   try {
