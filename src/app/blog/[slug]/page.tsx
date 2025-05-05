@@ -30,6 +30,12 @@ interface PostData {
   contentHtml: string;
 }
 
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
+
 // Create icon elements rather than returning components
 const IconFactory = (iconName: string) => {
   const iconMap = {
@@ -97,7 +103,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function BlogPostPage({ params }: PageProps) {
   try {
     // Get processed post data with HTML content
     const entrada = await getPostData(params.slug) as PostData;
