@@ -31,7 +31,7 @@ const getApiUrl = () => {
   // En desarrollo apuntamos al proyecto Portafolio en localhost:3001
   // En producción apuntamos a la URL de producción del proyecto Portafolio
   const domain = isProduction 
-    ? 'https://miguelvivar.vercel.app' // URL de producción (API desplegada)
+    ? 'https://miguelvivar-api.vercel.app' // URL de producción (API desplegada)
     : 'http://localhost:3001'; // URL local del proyecto Portafolio
     
   return `${domain}/api/spotify`;
