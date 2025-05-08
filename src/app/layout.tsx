@@ -24,16 +24,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
   ];
 
   return (
-    <html lang="es" className="hydrated">
+    <html lang="es" className="hydrated overflow-x-hidden">
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/logo.svg" />
       </head>
-      <body>
+      <body className="overflow-x-hidden">
         <TerminalProvider>
           <Navbar />
-          <main>
+          <main className="overflow-x-hidden">
             {children}
           </main>
           <Footer frases={frases} />
