@@ -39,7 +39,7 @@ export const categoriasHabilidades: CategoriaHabilidad[] = [
         nivel: "Avanzado", 
         icono: <FaHtml5 className="text-2xl" />,
         descripcion: "Estructura semántica, accesibilidad y buenas prácticas de SEO.",
-        proyectosRelacionados: ["Portfolio Web", "E-commerce", "Sitio Web Responsive"],
+        proyectosRelacionados: ["Portafolio Personal", "AiAssistEdu", "Calculadora de Consumo Y Propinas"],
         recursos: [
           { nombre: "Documentación MDN", url: "https://developer.mozilla.org/es/docs/Web/HTML" },
           { nombre: "HTML5 Boilerplate", url: "https://html5boilerplate.com/" }
@@ -50,7 +50,7 @@ export const categoriasHabilidades: CategoriaHabilidad[] = [
         nivel: "Avanzado", 
         icono: <FaCss3 className="text-2xl" />,
         descripcion: "Layouts avanzados con Flexbox y Grid, animaciones y responsive design.",
-        proyectosRelacionados: ["Portfolio Web", "Interfaces de Usuario", "Animaciones CSS"],
+        proyectosRelacionados: ["Portafolio Personal", "Portafolio VinnBonn", "Portafolio ChuchiPG"],
         recursos: [
           { nombre: "CSS-Tricks", url: "https://css-tricks.com/" },
           { nombre: "MDN CSS", url: "https://developer.mozilla.org/es/docs/Web/CSS" }
@@ -61,7 +61,7 @@ export const categoriasHabilidades: CategoriaHabilidad[] = [
         nivel: "Avanzado", 
         icono: <SiJavascript className="text-2xl" />,
         descripcion: "ES6+, manipulación del DOM, asincronía con Promises y async/await.",
-        proyectosRelacionados: ["Aplicación SPA", "Dashboard Interactivo", "E-commerce"],
+        proyectosRelacionados: ["Calculadora de Consumo Y Propinas", "AiAssistEdu", "Agencia de Viajes"],
         recursos: [
           { nombre: "JavaScript.info", url: "https://javascript.info/" },
           { nombre: "Eloquent JavaScript", url: "https://eloquentjavascript.net/" }
@@ -72,7 +72,7 @@ export const categoriasHabilidades: CategoriaHabilidad[] = [
         nivel: "Avanzado", 
         icono: <FaSass className="text-2xl" />,
         descripcion: "Preprocesador para CSS con variables, mixins y funciones.",
-        proyectosRelacionados: ["Portfolio Web", "Dashboard de Administración"],
+        proyectosRelacionados: ["Portafolio Personal", "AiAssistEdu", "Portafolio VinnBonn"],
         recursos: [
           { nombre: "Sass Guidelines", url: "https://sass-guidelin.es/es/" },
           { nombre: "Documentación Sass", url: "https://sass-lang.com/documentation" }
@@ -83,7 +83,7 @@ export const categoriasHabilidades: CategoriaHabilidad[] = [
         nivel: "Avanzado", 
         icono: <FaBootstrap className="text-2xl" />,
         descripcion: "Framework CSS para desarrollo responsive y mobile-first.",
-        proyectosRelacionados: ["Admin Dashboard", "Sitio Web Corporativo"],
+        proyectosRelacionados: ["Agencia de Viajes", "AiAssistEdu"],
         recursos: [
           { nombre: "Documentación Bootstrap", url: "https://getbootstrap.com/docs/" },
           { nombre: "Bootstrap Examples", url: "https://getbootstrap.com/docs/5.3/examples/" }
@@ -94,7 +94,7 @@ export const categoriasHabilidades: CategoriaHabilidad[] = [
         nivel: "Avanzado", 
         icono: <SiTailwindcss className="text-2xl" />,
         descripcion: "Framework utility-first para diseños personalizados sin salir del HTML.",
-        proyectosRelacionados: ["Portfolio Web", "Dashboard de Analítica"],
+        proyectosRelacionados: ["Portafolio Personal", "Portafolio VinnBonn", "Portafolio ChuchiPG"],
         recursos: [
           { nombre: "Documentación Tailwind", url: "https://tailwindcss.com/docs" },
           { nombre: "Tailwind UI", url: "https://tailwindui.com/" }
@@ -116,7 +116,7 @@ export const categoriasHabilidades: CategoriaHabilidad[] = [
         nivel: "Avanzado", 
         icono: <FaReact className="text-2xl" />,
         descripcion: "Biblioteca para interfaces de usuario con componentes, hooks y context API.",
-        proyectosRelacionados: ["Portfolio Web", "Aplicación SPA", "E-commerce"],
+        proyectosRelacionados: ["Portafolio Personal", "Calculadora de Consumo Y Propinas", "AiAssistEdu"],
         recursos: [
           { nombre: "Documentación React", url: "https://react.dev/" },
           { nombre: "React Patterns", url: "https://reactpatterns.com/" }
@@ -127,7 +127,7 @@ export const categoriasHabilidades: CategoriaHabilidad[] = [
         nivel: "Intermedio", 
         icono: <SiNextdotjs className="text-2xl" />,
         descripcion: "Framework React con SSR, rutas API y optimización de rendimiento.",
-        proyectosRelacionados: ["Blog con CMS", "E-commerce Avanzado"],
+        proyectosRelacionados: ["Portafolio VinnBonn", "Portafolio ChuchiPG", "Portafolio Personal"],
         recursos: [
           { nombre: "Documentación Next.js", url: "https://nextjs.org/docs" },
           { nombre: "Learn Next.js", url: "https://nextjs.org/learn" }
@@ -138,7 +138,7 @@ export const categoriasHabilidades: CategoriaHabilidad[] = [
         nivel: "Intermedio", 
         icono: <SiAstro className="text-2xl" />,
         descripcion: "Framework con enfoque en rendimiento y menos JavaScript en el cliente.",
-        proyectosRelacionados: ["Portfolio Web", "Sitio Web de Documentación"],
+        proyectosRelacionados: ["Portafolio Personal", "AiAssistEdu"],
         recursos: [
           { nombre: "Documentación Astro", url: "https://docs.astro.build/" },
           { nombre: "Astro Themes", url: "https://astro.build/themes/" }
@@ -149,7 +149,7 @@ export const categoriasHabilidades: CategoriaHabilidad[] = [
         nivel: "Intermedio", 
         icono: <SiTypescript className="text-2xl" />,
         descripcion: "JavaScript con tipado estático para aplicaciones más robustas.",
-        proyectosRelacionados: ["API REST", "Aplicación Empresarial"],
+        proyectosRelacionados: ["Portafolio Personal", "Portafolio VinnBonn", "Portafolio ChuchiPG"],
         recursos: [
           { nombre: "Documentación TypeScript", url: "https://www.typescriptlang.org/docs/" },
           { nombre: "TypeScript Deep Dive", url: "https://basarat.gitbook.io/typescript/" }
@@ -160,7 +160,7 @@ export const categoriasHabilidades: CategoriaHabilidad[] = [
         nivel: "Intermedio", 
         icono: <SiVite className="text-2xl" />,
         descripcion: "Bundler y servidor de desarrollo ultrarrápido para aplicaciones web.",
-        proyectosRelacionados: ["Portfolio Web", "Aplicación React"],
+        proyectosRelacionados: ["Calculadora de Consumo Y Propinas", "AiAssistEdu"],
         recursos: [
           { nombre: "Documentación Vite", url: "https://vitejs.dev/guide/" },
           { nombre: "Vite Plugins", url: "https://vitejs.dev/plugins/" }
@@ -171,7 +171,7 @@ export const categoriasHabilidades: CategoriaHabilidad[] = [
         nivel: "Intermedio", 
         icono: <SiFramer className="text-2xl" />,
         descripcion: "Biblioteca de animaciones potente y expresiva para React.",
-        proyectosRelacionados: ["Portfolio Web", "Interfaces Animadas"],
+        proyectosRelacionados: ["Portafolio Personal", "Portafolio VinnBonn", "Portafolio ChuchiPG"],
         recursos: [
           { nombre: "Documentación Framer Motion", url: "https://www.framer.com/motion/" },
           { nombre: "Examples", url: "https://www.framer.com/motion/examples/" }
