@@ -173,7 +173,7 @@ const Home: React.FC<HomeProps> = ({ roles }) => {
             >
               <div className="flex items-center justify-center gap-3 mb-3">
                 <div className="h-px w-12 bg-gradient-to-r from-transparent to-emerald-400/50"></div>
-                <h3 className="text-center text-emerald-300 font-semibold tracking-wide">Tecnologías que domino</h3>
+                <h3 className="text-center text-emerald-300 font-semibold tracking-wide">Principales Tecnologías que domino</h3>
                 <div className="h-px w-12 bg-gradient-to-l from-transparent to-emerald-400/50"></div>
               </div>
               <TechStack />

@@ -10,7 +10,7 @@ import ProjectCard from './ProjectCard';
 import AnimatedBackground from '../../components/AnimateBackground';
 import CallToAction from '../../components/CallToAction';
 import { FaGithub, FaThList, FaThLarge, FaSortAmountDown, FaSortAmountUpAlt, FaSortAlphaDown, FaSortAlphaUp } from 'react-icons/fa';
-import { FiMail, FiSearch } from 'react-icons/fi';
+import { FiMail, FiSearch, FiChevronLeft, FiChevronRight, FiChevronsLeft, FiChevronsRight } from 'react-icons/fi';
 
 // Variantes de animación
 const contenedorVariantes = {
@@ -265,81 +265,139 @@ const Proyectos: React.FC = () => {
               )}
             </motion.div>
           </AnimatePresence>
-        )}
-
-        {/* Paginación */}
+        )}        {/* Paginación */}
         {!cargando && proyectosMostrados.length > proyectosPorPagina && (
-          <div className="flex justify-center mt-12">
-            <div className="flex rounded-md">
-              <button
+          <motion.div 
+            className="flex flex-col items-center mt-12 gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="flex flex-wrap justify-center gap-2 md:gap-1">
+              {/* Primera página */}
+              <motion.button
+                onClick={() => cambiarPagina(1)}
+                disabled={paginaActual === 1}
+                className="h-10 w-10 flex items-center justify-center rounded-lg bg-neutral-800 text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-emerald-300/50 transition-all transform active:scale-95"
+                title="Primera página"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FiChevronsLeft className="text-lg" />
+              </motion.button>
+
+              {/* Página anterior */}
+              <motion.button
                 onClick={() => cambiarPagina(Math.max(1, paginaActual - 1))}
                 disabled={paginaActual === 1}
-                className="px-3 py-1 rounded-l-md bg-neutral-800 text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-neutral-700"
+                className="h-10 w-10 flex items-center justify-center rounded-lg bg-neutral-800 text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-emerald-300/50 transition-all transform active:scale-95"
+                title="Página anterior"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                &lt;
-              </button>
+                <FiChevronLeft className="text-lg" />
+              </motion.button>
               
-              {Array.from({ length: totalPaginas }, (_, i) => i + 1)
-                .filter(page => {
-                  // Mostrar siempre primera, última y páginas cercanas a la actual
-                  return page === 1 || 
-                         page === totalPaginas || 
-                         Math.abs(page - paginaActual) <= 1;
-                })
-                .map((page, i, arr) => {
-                  // Si hay un salto en la secuencia, mostrar puntos suspensivos
-                  if (i > 0 && page - arr[i-1] > 1) {
+              {/* Números de página */}
+              <div className="flex">
+                {Array.from({ length: totalPaginas }, (_, i) => i + 1)
+                  .filter(page => {
+                    // Mostrar siempre primera, última y páginas cercanas a la actual
+                    return page === 1 || 
+                          page === totalPaginas || 
+                          Math.abs(page - paginaActual) <= 1;
+                  })
+                  .map((page, i, arr) => {
+                    // Si hay un salto en la secuencia, mostrar puntos suspensivos
+                    if (i > 0 && page - arr[i-1] > 1) {
+                      return (
+                        <React.Fragment key={`ellipsis-${page}`}>
+                          <span className="h-10 w-8 flex items-center justify-center text-gray-400">
+                            •••
+                          </span>
+                          <motion.button
+                            key={page}
+                            onClick={() => cambiarPagina(page)}
+                            className={`h-10 w-10 rounded-lg flex items-center justify-center font-medium transition-all duration-300 ${
+                              paginaActual === page 
+                                ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/30' 
+                                : 'bg-neutral-800 text-white hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-emerald-300/50'
+                            }`}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            {page}
+                          </motion.button>
+                        </React.Fragment>
+                      );
+                    }
                     return (
-                      <React.Fragment key={`ellipsis-${page}`}>
-                        <span className="px-3 py-1 bg-neutral-800 text-gray-400">...</span>
-                        <button
-                          key={page}
-                          onClick={() => cambiarPagina(page)}
-                          className={`px-3 py-1 ${
-                            paginaActual === page 
-                              ? 'bg-emerald-600 text-white' 
-                              : 'bg-neutral-800 text-white hover:bg-neutral-700'
-                          }`}
-                        >
-                          {page}
-                        </button>
-                      </React.Fragment>
+                      <motion.button
+                        key={page}
+                        onClick={() => cambiarPagina(page)}
+                        className={`h-10 w-10 rounded-lg flex items-center justify-center font-medium transition-all duration-300 ${
+                          paginaActual === page 
+                            ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/30' 
+                            : 'bg-neutral-800 text-white hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-emerald-300/50'
+                        }`}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        {page}
+                      </motion.button>
                     );
-                  }
-                  return (
-                    <button
-                      key={page}
-                      onClick={() => cambiarPagina(page)}
-                      className={`px-3 py-1 ${
-                        paginaActual === page 
-                          ? 'bg-emerald-600 text-white' 
-                          : 'bg-neutral-800 text-white hover:bg-neutral-700'
-                      }`}
-                    >
-                      {page}
-                    </button>
-                  );
-                })}
+                  })}
+              </div>
               
-              <button
+              {/* Página siguiente */}
+              <motion.button
                 onClick={() => cambiarPagina(Math.min(totalPaginas, paginaActual + 1))}
                 disabled={paginaActual === totalPaginas}
-                className="px-3 py-1 rounded-r-md bg-neutral-800 text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-neutral-700"
+                className="h-10 w-10 flex items-center justify-center rounded-lg bg-neutral-800 text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-emerald-300/50 transition-all transform active:scale-95"
+                title="Página siguiente"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                &gt;
-              </button>
-            </div>
-          </div>
-        )}
+                <FiChevronRight className="text-lg" />
+              </motion.button>
 
-        {/* Resumen de resultados */}
+              {/* Última página */}
+              <motion.button
+                onClick={() => cambiarPagina(totalPaginas)}
+                disabled={paginaActual === totalPaginas}
+                className="h-10 w-10 flex items-center justify-center rounded-lg bg-neutral-800 text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-emerald-300/50 transition-all transform active:scale-95"
+                title="Última página"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FiChevronsRight className="text-lg" />
+              </motion.button>
+            </div>
+
+            {/* Indicador de página móvil */}
+            <div className="text-gray-400 text-sm font-medium">
+              Página <span className="text-emerald-400">{paginaActual}</span> de <span className="text-white">{totalPaginas}</span>
+            </div>
+          </motion.div>
+        )}        {/* Resumen de resultados */}
         {!cargando && (
-          <div className="text-center text-sm text-gray-400 mt-4">
-            Mostrando {proyectosActuales.length} de {proyectosMostrados.length} proyectos
+          <motion.div 
+            className="text-center text-sm mt-4 flex flex-wrap justify-center gap-2 items-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <span className="px-3 py-1 bg-neutral-800/50 rounded-full text-gray-300">
+              Mostrando <span className="font-medium text-emerald-400">{proyectosActuales.length}</span> de <span className="font-medium text-white">{proyectosMostrados.length}</span> proyectos
+            </span>
+            
             {busqueda && (
-              <> • Filtrando por: &quot;{busqueda}&quot;</>
+              <span className="px-3 py-1 bg-emerald-900/20 border border-emerald-500/20 rounded-full text-emerald-300 flex items-center gap-1.5">
+                <FiSearch className="text-xs" />
+                <span>Filtrando: &quot;{busqueda}&quot;</span>
+              </span>
             )}
-          </div>
+          </motion.div>
         )}
 
         {/* Sección de llamada a la acción */}
