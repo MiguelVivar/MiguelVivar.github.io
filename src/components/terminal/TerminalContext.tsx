@@ -238,7 +238,7 @@ export const TerminalProvider: React.FC<{ children: ReactNode }> = ({ children }
               <span className="text-emerald-200 font-medium">Email:</span> miguelvivarfarfan@gmail.com
             </p>
             <p className="text-gray-300">
-              <span className="text-emerald-200 font-medium">Ubicación:</span> Lima, Perú
+              <span className="text-emerald-200 font-medium">Ubicación:</span> Ica, Perú
             </p>
             <p className="text-gray-300">
               <span className="text-emerald-200 font-medium">Disponibilidad:</span> Freelance y proyectos
