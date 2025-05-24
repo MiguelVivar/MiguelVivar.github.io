@@ -19,7 +19,7 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ links, currentPath }) => {
     visible: { opacity: 1, y: 0 }
   };
   return (
-    <div className="hidden md:flex items-center space-x-4">
+    <div className="hidden lg:flex items-center space-x-4">
       {links.map((link, index) => (
         <motion.div
           key={link.href}
