@@ -4,7 +4,7 @@ import Home from '../ui/home/Home';
 const roles = [
   "Front-End",
   "Back-End",
-  "Full Stack",
+  "Full-Stack",
   "de Software"
 ];
 

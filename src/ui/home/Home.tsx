@@ -8,19 +8,11 @@ import AnimateBackground from '../../components/AnimateBackground';
 import TechStack from './TechStack';
 import Testimonials from './Testimonials';
 import AchievementsSection from './AchievementsSection';
-import { SiReact, SiNextdotjs, SiTailwindcss, SiAstro } from 'react-icons/si';
+import FloatingIcons from './FloatingIcons';
 
 interface HomeProps {
   roles: string[];
 }
-
-// Datos para las esferas flotantes
-const floatingIcons = [
-  { id: 1, icon: <SiReact />, color: "text-blue-400", size: "w-8 h-8", position: "top-[20%] left-[10%]", duration: 15 },
-  { id: 2, icon: <SiNextdotjs />, color: "text-white", size: "w-6 h-6", position: "top-[15%] right-[15%]", duration: 12 },
-  { id: 3, icon: <SiAstro />, color: "text-amber-500", size: "w-7 h-7", position: "bottom-[25%] left-[15%]", duration: 18 },
-  { id: 4, icon: <SiTailwindcss />, color: "text-cyan-400", size: "w-8 h-8", position: "bottom-[20%] right-[10%]", duration: 14 }
-];
 
 const Home: React.FC<HomeProps> = ({ roles }) => {
   // Estado para controlar el efecto parallax
@@ -82,27 +74,10 @@ const Home: React.FC<HomeProps> = ({ roles }) => {
       {/* Elementos decorativos que siguen al mouse */}
       <motion.div 
         className="absolute top-20 left-10 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl"
-        style={{ x: negativeBackgroundX, y: negativeBackgroundY }}
-      />
+        style={{ x: negativeBackgroundX, y: negativeBackgroundY }}      />
       
       {/* Iconos de Tecnologías Flotantes */}
-      {floatingIcons.map(icon => (
-        <motion.div
-          key={icon.id}
-          className={`absolute ${icon.position} ${icon.size} ${icon.color} opacity-30 flex items-center justify-center`}
-          animate={{ 
-            y: ['-20px', '20px', '-20px'],
-            rotate: [0, icon.id % 2 === 0 ? 15 : -15, 0]
-          }}
-          transition={{ 
-            repeat: Infinity, 
-            duration: icon.duration, 
-            ease: "easeInOut" 
-          }}
-        >
-          {icon.icon}
-        </motion.div>
-      ))}
+      <FloatingIcons />
       
       {/* Hero con efecto 3d */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative z-10">

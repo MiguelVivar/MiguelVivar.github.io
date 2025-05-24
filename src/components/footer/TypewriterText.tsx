@@ -20,7 +20,7 @@ const TypewriterText: React.FC<TypewriterTextProps> = ({
 
   return (
     <div className="inline relative">
-      <span>{text}</span>
+      <span>&quot;{text}&quot;</span>
       <span className={`absolute ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>
     </div>
   );
