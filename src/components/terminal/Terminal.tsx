@@ -2,15 +2,33 @@
 
 import React, { useState, useRef, useEffect, KeyboardEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaTerminal, FaTimes, FaChevronRight, FaMinus } from 'react-icons/fa';
+import { FaTerminal, FaTimes, FaMinus } from 'react-icons/fa';
 import { useTerminal } from './TerminalContext';
 import TerminalCommand from './TerminalCommand';
+import LoadingIndicator from './LoadingIndicator';
 
 // Lista de comandos para autocompletado
-const COMMANDS = ['help', 'about', 'skills', 'projects', 'contact', 'socials', 'clear', 'exit', 'date', 'weather', 'joke', 'calc', 'quote', 'history'];
+const COMMANDS = [
+  // Navegación
+  'help', 'nav', 'portfolio',
+  // Comandos directos de navegación
+  'home', 'inicio', 'about', 'sobremi', 'sobre-mi', 'projects', 'proyectos', 'skills', 'habilidades', 'contact', 'contacto',
+  // Información personal
+  'socials',
+  // Sistema de archivos
+  'ls', 'dir', 'cd', 'pwd', 'cat', 'find', 'tree',
+  // Comandos de desarrollo
+  'git', 'npm', 'code', 'whoami', 'ps',
+  // Easter eggs y diversión
+  'matrix', 'coffee', 'café', 'konami', 'fortune', 'sudo', 'joke', 'ascii', 'theme',
+  // Juegos
+  'game', 'guess',
+  // Utilidades
+  'date', 'weather', 'calc', 'quote', 'history', 'clear', 'exit'
+];
 
 const Terminal: React.FC = () => {
-  const { history, isOpen, handleCommand, closeTerminal } = useTerminal();
+  const { history, isOpen, handleCommand, closeTerminal, currentPath } = useTerminal();
   const [input, setInput] = useState('');
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
@@ -167,14 +185,15 @@ const Terminal: React.FC = () => {
                       isError={item.isError}
                     />
                   ))}
-                </div>
-
-                {/* Prompt de entrada */}
+                </div>                {/* Prompt de entrada */}
                 <div className="mt-2 pt-2 border-t border-neutral-700/50">
                   <form onSubmit={handleSubmit} className="flex items-center gap-2">
-                    <span className="text-emerald-400">
-                      <FaChevronRight size={14} />
-                    </span>
+                    <div className="flex items-center gap-1 text-sm">
+                      <span className="text-green-400 font-semibold">miguel@portfolio</span>
+                      <span className="text-gray-400">:</span>
+                      <span className="text-blue-400 font-mono">{currentPath}</span>
+                      <span className="text-emerald-400 font-bold">$</span>
+                    </div>
                     <div className="relative flex-1">
                       <input
                         ref={inputRef}
@@ -211,10 +230,12 @@ const Terminal: React.FC = () => {
                       </AnimatePresence>
                     </div>
                   </form>
-                </div>
-              </motion.div>
+                </div>              </motion.div>
             )}
           </AnimatePresence>
+          
+          {/* Indicador de carga para comandos asíncronos */}
+          <LoadingIndicator />
         </motion.div>
         
         {/* Pista de ayuda */}

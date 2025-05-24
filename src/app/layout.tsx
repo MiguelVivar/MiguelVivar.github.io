@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
-import TerminalProvider from "@/components/terminal/TerminalContext";
+import { TerminalProvider } from "@/components/terminal/TerminalContext";
 import Terminal from "@/components/terminal/Terminal";
 import TerminalButton from "@/components/terminal/TerminalButton";
 import JsonLd, { personSchema, websiteSchema } from "@/components/seo/JsonLd";
