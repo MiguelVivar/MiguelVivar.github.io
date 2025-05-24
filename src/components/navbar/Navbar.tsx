@@ -9,7 +9,7 @@ import Logo from './Logo';
 import DesktopMenu from './DesktopMenu';
 import MobileToggle from './MobileToggle';
 import MobileMenu from './MobileMenu';
-import { FaHome, FaUser, FaProjectDiagram, FaCode, FaBook } from 'react-icons/fa';
+import { FaHome, FaUser, FaProjectDiagram, FaCode } from 'react-icons/fa';
 import { IconType } from 'react-icons';
 
 const Navbar: React.FC = () => {
@@ -22,14 +22,12 @@ const Navbar: React.FC = () => {
   const [hovered, setHovered] = useState(false);
   // Obtener la ruta actual usando el hook de Next.js
   const pathname = usePathname();
-  
-  // Array de enlaces
+    // Array de enlaces
   const links: { href: string; label: string; icon: IconType }[] = [
     { href: '/', label: 'Inicio', icon: FaHome },
     { href: '/sobremi', label: 'Sobre Mí', icon: FaUser },
     { href: '/habilidades', label: 'Habilidades', icon: FaCode },
-    { href: '/proyectos', label: 'Proyectos', icon: FaProjectDiagram },
-    { href: '/blog', label: 'Blog', icon: FaBook }
+    { href: '/proyectos', label: 'Proyectos', icon: FaProjectDiagram }
   ];
 
   // Configurar detección de scroll

@@ -102,10 +102,9 @@ export const categoriasHabilidades: CategoriaHabilidad[] = [
       },
       { 
         nombre: "Bulma CSS", 
-        nivel: "Avanzado", 
-        icono: <SiBulma className="text-2xl" />,
+        nivel: "Avanzado",        icono: <SiBulma className="text-2xl" />,
         descripcion: "Framework CSS moderno basado en Flexbox y responsive.",
-        proyectosRelacionados: ["Aplicación de Notas", "Blog Personal"],
+        proyectosRelacionados: ["Aplicación de Notas", "Portafolio Personal"],
         recursos: [
           { nombre: "Documentación Bulma", url: "https://bulma.io/documentation/" },
           { nombre: "Bulma Templates", url: "https://bulmatemplates.github.io/bulma-templates/" }
@@ -223,11 +222,10 @@ export const categoriasHabilidades: CategoriaHabilidad[] = [
         ]
       },
       { 
-        nombre: "MySQL", 
-        nivel: "Intermedio", 
+        nombre: "MySQL",        nivel: "Intermedio", 
         icono: <SiMysql className="text-2xl" />,
         descripcion: "Sistema de gestión de bases de datos relacionales con SQL.",
-        proyectosRelacionados: ["E-commerce", "Sistema de Gestión", "Blog"],
+        proyectosRelacionados: ["E-commerce", "Sistema de Gestión", "API REST"],
         recursos: [
           { nombre: "Documentación MySQL", url: "https://dev.mysql.com/doc/" },
           { nombre: "MySQL Tutorial", url: "https://www.mysqltutorial.org/" }

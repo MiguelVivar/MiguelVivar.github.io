@@ -24,7 +24,7 @@ Visita mi portfolio en vivo: [miguelvivar.github.io](https://miguelvivar.github.
 
 - **Diseño Moderno y Responsivo**: Adaptado a todo tipo de dispositivos, desde móviles hasta pantallas de escritorio
 - **Animaciones Fluidas**: Implementadas con Framer Motion para una experiencia de usuario dinámica
-- **Blog Integrado**: Sistema de contenidos con markdown para publicar y compartir artículos
+- **Responsive Design**: Adaptado perfectamente a todos los dispositivos y tamaños de pantalla
 - **Modo Oscuro/Claro**: Cambio de tema adaptado a las preferencias del usuario
 - **Sección de Spotify**: Muestra en tiempo real lo que estoy escuchando mediante integración con la API de Spotify
 - **Formulario de Contacto**: Permite a los visitantes enviar mensajes directamente desde la web
@@ -42,10 +42,8 @@ Visita mi portfolio en vivo: [miguelvivar.github.io](https://miguelvivar.github.
 - **Framer Motion 12**: Biblioteca para animaciones avanzadas y transiciones fluidas
 
 ### Contenido y Datos
-- **Gray Matter**: Parser de frontmatter para archivos Markdown
-- **Remark/Remark-HTML**: Procesador de Markdown para el blog
 - **Nanostores**: Gestión de estado ligera y reactiva
-- **Date-fns**: Manipulación de fechas para el blog y contenidos dinámicos
+- **Date-fns**: Manipulación de fechas y contenidos dinámicos
 
 ### Estilo y UI
 - **Heroicons**: Iconos SVG de alta calidad
@@ -98,12 +96,9 @@ Visita [http://localhost:3000](http://localhost:3000) para ver la aplicación en
   /logo.svg        # Logo del sitio
   /perfil.png      # Imagen de perfil
   /portafolio.png  # Captura del portfolio
-  /blog1.png       # Imagen del blog
-
-/src
+  /src
   /app             # Páginas de la aplicación (Next.js App Router)
     /api           # API routes (Spotify, etc.)
-    /blog          # Blog y artículos
     /contacto      # Página de contacto
     /habilidades   # Página de habilidades
     /proyectos     # Página de proyectos
@@ -117,10 +112,7 @@ Visita [http://localhost:3000](http://localhost:3000) para ver la aplicación en
     /AnimateBackground.tsx # Animaciones de fondo
     /CallToAction.tsx # Componentes de llamada a la acción
     /SpotifyNowPlaying.tsx # Widget de Spotify
-
-  /content         # Datos estructurados en Markdown
-    /blog          # Artículos del blog en formato MD
-    /blog.ts       # Configuración y utilidades del blog
+  /content         # Contenido estructurado
 
   /data            # Datos estructurados
     /proyectos.tsx # Información de proyectos
@@ -131,9 +123,7 @@ Visita [http://localhost:3000](http://localhost:3000) para ver la aplicación en
   /hooks           # Custom hooks
     /useLocalStorage.ts # Persistencia en localStorage
     /useTypewriter.ts   # Efecto de escritura automática
-
   /ui              # Componentes específicos por sección
-    /blog          # Componentes para el blog 
     /contacto      # Componentes de la página de contacto
     /error404      # Página de error personalizada
     /habilidades   # Componentes de la página de habilidades
@@ -141,7 +131,6 @@ Visita [http://localhost:3000](http://localhost:3000) para ver la aplicación en
     /sobremi       # Componentes de la página sobre mí
 
   /utils           # Utilidades y funciones auxiliares
-    /markdown.ts   # Procesamiento de archivos markdown
 ```
 
 ## 📱 Secciones Principales
@@ -150,7 +139,6 @@ Visita [http://localhost:3000](http://localhost:3000) para ver la aplicación en
 - **Sobre Mí**: Información detallada sobre mi trayectoria, formación y valores profesionales
 - **Habilidades**: Tecnologías y herramientas que domino, organizadas por categorías y nivel de experiencia
 - **Proyectos**: Portafolio de trabajos destacados con descripciones, tecnologías utilizadas y enlaces
-- **Blog**: Artículos sobre desarrollo, tecnología y experiencias profesionales
 - **Contacto**: Formulario de contacto y enlaces directos a redes sociales y correo electrónico
 
 ## 🔧 Scripts Disponibles
@@ -159,18 +147,6 @@ Visita [http://localhost:3000](http://localhost:3000) para ver la aplicación en
 - `npm run build`: Construye la aplicación para producción optimizando todos los recursos
 - `npm run start`: Inicia la aplicación en modo producción después de construirla
 - `npm run lint`: Ejecuta el linter para verificar y corregir problemas en el código
-
-## 📝 Blog y Sistema de Contenidos
-
-El portfolio incluye un sistema de blog completo con:
-
-- Artículos escritos en Markdown para fácil mantenimiento
-- Sintaxis highlighting para fragmentos de código
-- Tiempo estimado de lectura
-- Compartir en redes sociales
-- Categorías y etiquetas
-- Artículos relacionados
-- Barra de progreso de lectura
 
 ## 🌓 Temas Claro y Oscuro
 
