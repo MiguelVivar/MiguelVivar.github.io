@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
 import { toggleMenu } from './store';
 import { MdEmail } from 'react-icons/md';
 import SocialIcons from './SocialIcons';
@@ -16,6 +15,7 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links, currentPath }) => {
+  // Variantes para animaciones de elementos
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
@@ -43,6 +43,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links, currentPath }) =
           transition={{ duration: 0.3 }}
           className="absolute inset-x-0 top-16 z-40 lg:hidden overflow-hidden"
         >
+          {/* Fondo con efecto de blur que se integra con la barra de nav */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -50,6 +51,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links, currentPath }) =
             className="absolute inset-0 bg-gradient-to-b from-neutral-900/95 to-neutral-900/98 backdrop-blur-xl"
           />
           
+          {/* Efecto de brillo en bordes */}
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }}
@@ -74,7 +76,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links, currentPath }) =
                 exit="exit"
                 className="w-full"
               >
-                <Link
+                <motion.a
                   href={link.href}
                   className={`relative flex items-center justify-center py-2 px-4 text-xl font-bold transition-all duration-300 rounded-lg overflow-hidden ${
                     currentPath === link.href 
@@ -83,53 +85,50 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links, currentPath }) =
                   }`}
                   aria-current={currentPath === link.href ? "page" : undefined}
                   onClick={() => toggleMenu()}
+                  whileHover={{ x: 5 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  <motion.div
-                    whileHover={{ x: 5 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full h-full flex items-center justify-center"
-                  >
+                  {/* Efecto de brillo al pasar el ratón */}
+                  <motion.div 
+                    className="absolute -inset-full h-full w-full z-0 bg-gradient-to-r from-transparent via-emerald-500/10 to-transparent"
+                    animate={{
+                      x: ['200%', '-200%'],
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  />
+                  
+                  <div className="flex items-center justify-center relative z-10 w-full">
                     <motion.div 
-                      className="absolute -inset-full h-full w-full z-0 bg-gradient-to-r from-transparent via-emerald-500/10 to-transparent"
-                      animate={{
-                        x: ['200%', '-200%'],
-                      }}
-                      transition={{
-                        duration: 2.5,
-                        repeat: Infinity,
-                        ease: "linear",
-                      }}
-                    />
+                      className="mr-3" 
+                      animate={currentPath === link.href ? {
+                        scale: [1, 1.2, 1],
+                        transition: { 
+                          repeat: Infinity, 
+                          duration: 2, 
+                          repeatType: 'loop' 
+                        }
+                      } : {}}
+                    >
+                      <link.icon className={`w-5 h-5 ${currentPath === link.href ? 'text-emerald-300' : 'text-gray-400'}`} />
+                    </motion.div>
+                    {link.label}
                     
-                    <div className="flex items-center justify-center relative z-10 w-full">
-                      <motion.div 
-                        className="mr-3" 
-                        animate={currentPath === link.href ? {
-                          scale: [1, 1.2, 1],
-                          transition: { 
-                            repeat: Infinity, 
-                            duration: 2, 
-                            repeatType: 'loop' 
-                          }
-                        } : {}}
+                    {currentPath === link.href && (
+                      <motion.span 
+                        className="ml-2 text-xl"
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3 }}
                       >
-                        <link.icon className={`w-5 h-5 ${currentPath === link.href ? 'text-emerald-300' : 'text-gray-400'}`} />
-                      </motion.div>
-                      {link.label}
-                      
-                      {currentPath === link.href && (
-                        <motion.span 
-                          className="ml-2 text-xl"
-                          initial={{ opacity: 0, x: -10 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          •
-                        </motion.span>
-                      )}
-                    </div>
-                  </motion.div>
-                </Link>
+                        •
+                      </motion.span>
+                    )}
+                  </div>
+                </motion.a>
               </motion.div>
             ))}
             
@@ -150,7 +149,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links, currentPath }) =
               exit="exit"
               className="w-full pt-1"
             >
-              <Link
+              <motion.a
                 href="/contacto"
                 className={`relative overflow-hidden inline-flex items-center justify-center px-6 py-2 rounded-lg text-base font-bold transition-colors duration-300 w-full ${
                   currentPath === '/contacto' 
@@ -159,42 +158,39 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links, currentPath }) =
                 }`}
                 aria-current={currentPath === '/contacto' ? "page" : undefined}
                 onClick={() => toggleMenu()}
+                whileTap={{ scale: 0.98 }}
               >
+                {/* Efecto de brillo al pasar el ratón */}
+                {currentPath !== '/contacto' && (
+                  <motion.div 
+                    className="absolute -inset-full h-full w-full z-0 bg-gradient-to-r from-transparent via-emerald-300/20 to-transparent"
+                    animate={{
+                      x: ['200%', '-200%'],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  />
+                )}
+                
                 <motion.div
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full h-full flex items-center justify-center"
+                  animate={currentPath === '/contacto' ? {} : { 
+                    y: [0, -2, 0, 2, 0],
+                    x: [0, 1, 0, -1, 0],
+                  }}
+                  transition={{ 
+                    duration: 2, 
+                    repeat: Infinity, 
+                    repeatType: "loop" 
+                  }}
+                  className="mr-2"
                 >
-                  {currentPath !== '/contacto' && (
-                    <motion.div 
-                      className="absolute -inset-full h-full w-full z-0 bg-gradient-to-r from-transparent via-emerald-300/20 to-transparent"
-                      animate={{
-                        x: ['200%', '-200%'],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "linear",
-                      }}
-                    />
-                  )}
-                  
-                  <motion.div
-                    animate={currentPath === '/contacto' ? {} : { 
-                      y: [0, -2, 0, 2, 0],
-                      x: [0, 1, 0, -1, 0],
-                    }}
-                    transition={{ 
-                      duration: 2, 
-                      repeat: Infinity, 
-                      repeatType: "loop" 
-                    }}
-                    className="mr-2"
-                  >
-                    <MdEmail className="w-5 h-5" />
-                  </motion.div>
-                  <span className="relative z-10">Contacto</span>
+                  <MdEmail className="w-5 h-5" />
                 </motion.div>
-              </Link>
+                <span className="relative z-10">Contacto</span>
+              </motion.a>
             </motion.div>
             
             <motion.div
