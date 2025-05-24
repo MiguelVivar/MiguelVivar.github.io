@@ -9,7 +9,6 @@ import Logo from './Logo';
 import DesktopMenu from './DesktopMenu';
 import MobileToggle from './MobileToggle';
 import MobileMenu from './MobileMenu';
-import GlobalSearch from '@/components/search/GlobalSearch';
 import { FaHome, FaUser, FaProjectDiagram, FaCode } from 'react-icons/fa';
 import { IconType } from 'react-icons';
 
@@ -23,7 +22,8 @@ const Navbar: React.FC = () => {
   const [hovered, setHovered] = useState(false);
   // Obtener la ruta actual usando el hook de Next.js
   const pathname = usePathname();
-    // Array de enlaces
+  
+  // Array de enlaces
   const links: { href: string; label: string; icon: IconType }[] = [
     { href: '/', label: 'Inicio', icon: FaHome },
     { href: '/sobremi', label: 'Sobre Mí', icon: FaUser },
@@ -98,12 +98,10 @@ const Navbar: React.FC = () => {
         {/* Efecto de brillo en la parte superior */}
         <div className={`absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-transparent via-emerald-300/30 to-transparent transition-opacity duration-300 ${scrolled ? 'opacity-90' : 'opacity-40'}`}></div>
         
-        <div className="max-w-7xl mx-auto">          <div className="flex items-center justify-between h-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between h-16">
             <Logo />
-            <div className="hidden md:flex items-center gap-4">
-              <DesktopMenu links={links} currentPath={normalizedPath} />
-              <GlobalSearch />
-            </div>
+            <DesktopMenu links={links} currentPath={normalizedPath} />
             <MobileToggle />
           </div>
           
