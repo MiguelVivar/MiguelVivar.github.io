@@ -25,6 +25,17 @@ export interface ValorData {
   icono: React.ReactNode;
 }
 
+export interface CarreraData {
+  carrera: string;
+  universidad: string;
+  cicloActual: number;
+  ciclosTotales: number;
+  porcentajeCompletado: number;
+  fechaInicio: string;
+  fechaEstimadaFinalizacion: string;
+  estadoActual: string;
+}
+
 // Datos para la sección de certificados
 export const certificados: CertificadoData[] = [
   {
@@ -95,10 +106,21 @@ export const valores: ValorData[] = [
     titulo: "Colaboración",
     descripcion: "Creo en el poder del trabajo en equipo para lograr resultados excepcionales.",
     icono: <FaTeamspeak className="w-8 h-8" />
-  },
-  {
+  },  {
     titulo: "Proactividad",
     descripcion: "Tomo la iniciativa para identificar oportunidades y resolver problemas antes de que escalen.",
     icono: <FaRocket className="w-8 h-8" />
   }
 ];
+
+// Datos para la sección de carrera universitaria
+export const carrera: CarreraData = {
+  carrera: "Ingeniería de Sistemas",
+  universidad: "Universidad Nacional de Ingeniería",
+  cicloActual: 4,
+  ciclosTotales: 10,
+  porcentajeCompletado: 40,
+  fechaInicio: "2023",
+  fechaEstimadaFinalizacion: "2028",
+  estadoActual: "En curso"
+};

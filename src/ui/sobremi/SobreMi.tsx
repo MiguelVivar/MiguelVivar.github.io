@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { certificados, idiomas, valores } from '../../data/sobremi';
+import { certificados, idiomas, valores, carrera } from '../../data/sobremi';
 import PageHeader from './PageHeader';
 import ProfileSection from './ProfileSection';
 import ProfileImage from './ProfileImage';
@@ -10,6 +10,7 @@ import Timeline from './Timeline';
 import CertificatesSection from './CertificatesSection';
 import LanguagesSection from './LanguagesSection';
 import ValuesSection from './ValuesSection';
+import AcademicProgress from './AcademicProgress';
 import CallToAction from '../../components/CallToAction';
 import AnimatedBackground from '../../components/AnimateBackground';
 import { FaFileAlt, FaChevronDown } from 'react-icons/fa';
@@ -107,9 +108,7 @@ const SobreMi: React.FC = () => {
           
           <ProfileSection />
           <ProfileImage />
-        </motion.div>
-
-        {/* Sección de Trayectoria con efectos de scroll */}
+        </motion.div>        {/* Sección de Trayectoria con efectos de scroll */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -118,6 +117,9 @@ const SobreMi: React.FC = () => {
         >
           <Timeline />
         </motion.div>
+
+        {/* Sección de Progreso Académico */}
+        <AcademicProgress carrera={carrera} />
 
         {/* Sección de Certificados con diseño de tarjetas mejorado */}
         <motion.div
