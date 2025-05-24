@@ -7,7 +7,7 @@ import { useTerminal } from './TerminalContext';
 import TerminalCommand from './TerminalCommand';
 
 // Lista de comandos para autocompletado
-const COMMANDS = ['help', 'about', 'skills', 'projects', 'contact', 'socials', 'clear', 'exit'];
+const COMMANDS = ['help', 'about', 'skills', 'projects', 'contact', 'socials', 'clear', 'exit', 'date', 'weather', 'joke', 'calc', 'quote', 'history'];
 
 const Terminal: React.FC = () => {
   const { history, isOpen, handleCommand, closeTerminal } = useTerminal();

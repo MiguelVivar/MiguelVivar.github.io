@@ -121,6 +121,6 @@ export const carrera: CarreraData = {
   ciclosTotales: 10,
   porcentajeCompletado: 40,
   fechaInicio: "2023",
-  fechaEstimadaFinalizacion: "2028",
+  fechaEstimadaFinalizacion: "2027",
   estadoActual: "En curso"
 };
