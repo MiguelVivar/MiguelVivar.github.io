@@ -6,7 +6,6 @@ import HeroHeader from './HeroHeader';
 import ProfileImage from './ProfileImage';
 import AnimateBackground from '../../components/AnimateBackground';
 import TechStack from './TechStack';
-import Testimonials from './Testimonials';
 import AchievementsSection from './AchievementsSection';
 import FloatingIcons from './FloatingIcons';
 
@@ -159,11 +158,6 @@ const Home: React.FC<HomeProps> = ({ roles }) => {
       
       {/* Sección de Logros */}
       <AchievementsSection showAchievements={true} />
-      
-      {/* Sección de Testimonios */}
-      <section className="relative z-10 px-4 sm:px-6 lg:px-8">
-        <Testimonials />
-      </section>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-neutral-900 to-transparent pointer-events-none"></div>
     </main>
   );

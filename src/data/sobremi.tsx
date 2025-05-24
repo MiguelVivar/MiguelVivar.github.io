@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLightbulb, FaHandshake, FaClock, FaRocket, FaCode, FaTeamspeak } from 'react-icons/fa';
+import { FaLightbulb, FaHandshake, FaClock, FaRocket, FaCode, FaTeamspeak, FaUsers, FaGraduationCap, FaDesktop, FaTools, FaCogs, FaLaptop, FaKeyboard, FaMouse, FaChair } from 'react-icons/fa';
 
 // Tipos exportados para usar en componentes
 export interface CertificadoCategoria {
@@ -34,6 +34,34 @@ export interface CarreraData {
   fechaInicio: string;
   fechaEstimadaFinalizacion: string;
   estadoActual: string;
+}
+
+export interface VoluntariadoData {
+  organizacion: string;
+  rol: string;
+  periodo: string;
+  descripcion: string;
+  actividades: string[];
+  icono: React.ReactNode;
+  color: string;
+}
+
+export interface SetupData {
+  hardware: {
+    titulo: string;
+    descripcion: string;
+    icono: React.ReactNode;
+  }[];
+  software: {
+    titulo: string;
+    descripcion: string;
+    icono: React.ReactNode;
+  }[];
+  workflow: {
+    titulo: string;
+    descripcion: string;
+    icono: React.ReactNode;
+  }[];
 }
 
 // Datos para la sección de certificados
@@ -123,4 +151,108 @@ export const carrera: CarreraData = {
   fechaInicio: "2023",
   fechaEstimadaFinalizacion: "2027",
   estadoActual: "En curso"
+};
+
+// Datos para la sección de voluntariados
+export const voluntariados: VoluntariadoData[] = [
+  {
+    organizacion: "Google Developer Groups Ica (GDG Ica)",
+    rol: "Team Member",
+    periodo: "2024 - Presente",
+    descripcion: "Participación activa en la comunidad tecnológica local, colaborando en eventos y workshops para promover el desarrollo de habilidades en tecnologías Google.",
+    actividades: [
+      "Organización de eventos y workshops técnicos",
+      "Apoyo en conferencias y meetups tecnológicos",
+      "Desarrollo de la plataforma web del GDG Ica",
+      "Diseño de flyers y materiales promocionales",
+      "Promoción de tecnologías emergentes en la comunidad"
+    ],
+    icono: <FaUsers className="w-8 h-8" />,
+    color: "from-blue-500 to-green-500"
+  },
+  {
+    organizacion: "InnovaTech Ica 2025",
+    rol: "Organizador",
+    periodo: "2025",
+    descripcion: "Evento de innovación tecnológica en Ica, donde se busca fomentar el emprendimiento y la creación de soluciones tecnológicas para la región.",
+    actividades: [
+      "Coordinación de sponsors",
+      "Gestión de redes sociales y promoción del evento",
+      "Desarrollo de la página web del evento",
+      "Diseño de materiales gráficos y promocionales",
+      "Colaboración con universidades y empresas locales",
+      "Colaboración con empresas locales para patrocinios"
+    ],    icono: <FaGraduationCap className="w-8 h-8" />,
+    color: "from-purple-500 to-pink-500"
+  }
+];
+
+// Datos para la sección de setup de desarrollo
+export const setupData: SetupData = {
+  hardware: [
+    {
+      titulo: "Laptop HP Victus",
+      descripcion: "Intel i5, 32GB RAM - Para desarrollo móvil y trabajo remoto cuando necesito portabilidad",
+      icono: <FaLaptop className="w-8 h-8" />
+    },
+    {
+      titulo: "Monitor Teros TE-2471G Dual Setup",
+      descripcion: "Configuración de doble monitor para mayor productividad - código en una pantalla, documentación en otra",
+      icono: <FaDesktop className="w-8 h-8" />
+    },
+    {
+      titulo: "Teclado Mecánico Redragon Kumara K552",
+      descripcion: "Teclado mecánico con retroiluminación RGB - comodidad y estilo para largas horas de codificación",
+      icono: <FaKeyboard className="w-8 h-8" />
+    },
+    {
+      titulo: "Mouse Gaming Logitech G502 Hero",
+      descripcion: "Mouse ergonómico con múltiples botones programables - optimiza mi flujo de trabajo",
+      icono: <FaMouse className="w-8 h-8" />
+    },
+    {
+      titulo: "Silla Gamer",
+      descripcion: "Silla ergonómica para largas horas de trabajo - comodidad y soporte lumbar",
+      icono: <FaChair className="w-8 h-8" />
+    },
+    {
+      titulo: "Soporte para Laptop",
+      descripcion: "Soporte ajustable para laptop - mejora la ergonomía y la ventilación",
+      icono: <FaLaptop className="w-8 h-8" />
+    }
+  ],
+  software: [
+    {
+      titulo: "Visual Studio Code",
+      descripcion: "Mi editor principal con extensiones como Prettier, ESLint, GitLens y temas personalizados para una experiencia óptima",
+      icono: <FaCode className="w-8 h-8" />
+    },
+    {
+      titulo: "Git & GitHub",
+      descripcion: "Control de versiones esencial para todos mis proyectos, con workflows automatizados y CI/CD",
+      icono: <FaTools className="w-8 h-8" />
+    },
+    {
+      titulo: "Figma & Canva",
+      descripcion: "Para diseño UI/UX y creación de prototipos antes de desarrollar, manteniendo consistency en el diseño",
+      icono: <FaTools className="w-8 h-8" />
+    }
+  ],
+  workflow: [
+    {
+      titulo: "Metodología Agile",
+      descripcion: "Desarrollo iterativo con sprints cortos, planning y retrospectivas para mejora continua",
+      icono: <FaCogs className="w-8 h-8" />
+    },
+    {
+      titulo: "Test-Driven Development",
+      descripcion: "Escribo pruebas antes del código para garantizar calidad y mantenibilidad del software",
+      icono: <FaCogs className="w-8 h-8" />
+    },
+    {
+      titulo: "Code Review & Documentation",
+      descripcion: "Revisión de código en equipo y documentación detallada para proyectos escalables y mantenibles",
+      icono: <FaCogs className="w-8 h-8" />
+    }
+  ]
 };

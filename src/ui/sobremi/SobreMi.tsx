@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { certificados, idiomas, valores, carrera } from '../../data/sobremi';
+import { certificados, idiomas, valores, carrera, voluntariados, setupData } from '../../data/sobremi';
 import PageHeader from './PageHeader';
 import ProfileSection from './ProfileSection';
 import ProfileImage from './ProfileImage';
@@ -12,6 +12,8 @@ import CertificatesSection from './CertificatesSection';
 import LanguagesSection from './LanguagesSection';
 import ValuesSection from './ValuesSection';
 import AcademicProgress from './AcademicProgress';
+import VolunteeringSection from './VolunteeringSection';
+import SetupSection from './SetupSection';
 import CallToAction from '../../components/CallToAction';
 import AnimatedBackground from '../../components/AnimateBackground';
 import { FaFileAlt, FaChevronDown } from 'react-icons/fa';
@@ -151,9 +153,7 @@ const SobreMi: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <LanguagesSection idiomas={idiomas} />
-        </motion.div>
-
-        {/* Sección de Valores con animaciones mejoradas */}
+        </motion.div>        {/* Sección de Valores con animaciones mejoradas */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -161,6 +161,24 @@ const SobreMi: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <ValuesSection valores={valores} />
+        </motion.div>        {/* Sección de Voluntariados */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+        >
+          <VolunteeringSection voluntariados={voluntariados} />
+        </motion.div>
+
+        {/* Sección de Setup de Desarrollo */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+        >
+          <SetupSection setupData={setupData} />
         </motion.div>
         
         {/* Sección de Llamada a la Acción con mejor diseño */}
@@ -172,7 +190,6 @@ const SobreMi: React.FC = () => {
           className="mt-20 relative overflow-hidden rounded-2xl"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-teal-600/20 -z-10"></div>
-          <div className="absolute inset-0 bg-[url('/path-to-subtle-pattern.png')] opacity-5 mix-blend-soft-light -z-10"></div>
           
           <CallToAction 
             title='¿Listo para' 
