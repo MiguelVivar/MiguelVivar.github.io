@@ -9,6 +9,7 @@ import Logo from './Logo';
 import DesktopMenu from './DesktopMenu';
 import MobileToggle from './MobileToggle';
 import MobileMenu from './MobileMenu';
+import GlobalSearch from '@/components/search/GlobalSearch';
 import { FaHome, FaUser, FaProjectDiagram, FaCode } from 'react-icons/fa';
 import { IconType } from 'react-icons';
 
@@ -102,6 +103,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center justify-between h-16">
             <Logo />
             <DesktopMenu links={links} currentPath={normalizedPath} />
+            <GlobalSearch />
             <MobileToggle />
           </div>
           
