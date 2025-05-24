@@ -6,6 +6,7 @@ import { certificados, idiomas, valores, carrera } from '../../data/sobremi';
 import PageHeader from './PageHeader';
 import ProfileSection from './ProfileSection';
 import ProfileImage from './ProfileImage';
+import GitHubDashboard from './GitHubDashboard';
 import Timeline from './Timeline';
 import CertificatesSection from './CertificatesSection';
 import LanguagesSection from './LanguagesSection';
@@ -105,10 +106,21 @@ const SobreMi: React.FC = () => {
           {/* Elementos decorativos de fondo */}
           <div className="absolute -z-10 w-72 h-72 bg-emerald-500/30 rounded-full blur-[100px] top-1/3 -left-20 parallax-element" data-speed="0.05"></div>
           <div className="absolute -z-10 w-64 h-64 bg-teal-500/20 rounded-full blur-[80px] bottom-10 right-10 parallax-element" data-speed="0.08"></div>
-          
-          <ProfileSection />
+            <ProfileSection />
           <ProfileImage />
-        </motion.div>        {/* Sección de Trayectoria con efectos de scroll */}
+        </motion.div>
+
+        {/* GitHub Dashboard */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+        >
+          <GitHubDashboard />
+        </motion.div>
+
+        {/* Sección de Trayectoria con efectos de scroll */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
