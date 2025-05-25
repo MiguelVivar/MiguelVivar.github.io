@@ -192,7 +192,7 @@ export const setupData: SetupData = {
   hardware: [
     {
       titulo: "Laptop HP Victus",
-      descripcion: "Intel i5, 32GB RAM - Para desarrollo móvil y trabajo remoto cuando necesito portabilidad",
+      descripcion: "Intel i5, 32GB RAM, RTX 3050 - Potente y portátil para desarrollo y gaming",
       icono: <FaLaptop className="w-8 h-8" />
     },
     {
